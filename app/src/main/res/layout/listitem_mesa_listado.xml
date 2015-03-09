@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout_listitem_listado"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    android:divider="@drawable/list_divider"
+    android:baselineAligned="true">
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_listitem_numronda"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.09"
+        android:padding="5dp">
+                
+		<TextView 
+		    android:id="@+id/textview_listitem_numronda"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:textSize="20sp"
+		    android:textColor="@android:color/primary_text_light"
+			android:maxLines="1"
+			android:ellipsize="end" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_listitem_jugador1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:padding="5dp">
+                
+	   	<TextView android:id="@+id/textview_listitem_jugador1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:textSize="20sp"
+		    android:textColor="@android:color/primary_text_light"
+			android:maxLines="1"
+			android:ellipsize="end" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/relativelayout_listitem_jugador2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:padding="5dp">
+                
+	   <TextView android:id="@+id/textview_listitem_jugador2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:textSize="20sp"
+		    android:textColor="@android:color/primary_text_light"
+			android:maxLines="1"
+			android:ellipsize="end" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/relativelayout_listitem_jugador3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:padding="5dp">
+                
+	   <TextView android:id="@+id/textview_listitem_jugador3"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:textSize="20sp"
+		    android:textColor="@android:color/primary_text_light"
+			android:maxLines="1"
+			android:ellipsize="end" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/relativelayout_listitem_jugador4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:padding="5dp">
+                
+	   <TextView android:id="@+id/textview_listitem_jugador4"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:textSize="20sp"
+		    android:textColor="@android:color/primary_text_light"
+			android:maxLines="1"
+			android:ellipsize="end" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/relativelayout_listitem_puntosJugada"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.11"
+        android:padding="5dp">
+                
+		 <TextView 
+	     	android:id="@+id/textview_listitem_puntosJugada"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:textSize="20sp"
+			android:textColor="@android:color/primary_text_light"
+			android:maxLines="1"
+			android:ellipsize="end" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

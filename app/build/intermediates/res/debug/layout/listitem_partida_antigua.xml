@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listitem_partida_antigua"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textview_id_partida_antigua"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/textview_fecha_inicio_partida_antigua"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:layout_margin="1px"
+            android:textSize="16dp"
+            android:background="@color/grisoscuro" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/textview_numero_rondas_partida_antigua"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:layout_margin="1px"
+                android:textSize="16dp"
+                android:background="@color/grisoscuro" />
+
+            <TextView
+                android:id="@+id/textview_mejor_mano_partida_antigua"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:layout_margin="1px"
+                android:textSize="16dp"
+                android:background="@color/grisoscuro" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/textview_jugador1_partida_antigua"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:layout_margin="1px"
+                android:background="@color/grisoscuro"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textview_jugador4_partida_antigua"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:layout_margin="1px"
+                android:background="@color/grisoscuro" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/textview_jugador2_partida_antigua"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:layout_margin="1px"
+                android:background="@color/grisoscuro" />
+
+            <TextView
+                android:id="@+id/textview_jugador3_partida_antigua"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:layout_margin="1px"
+                android:background="@color/grisoscuro" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/C:/Android/MahjongScoring/app/src/main/res/layout/listitem_partida_antigua.xml -->

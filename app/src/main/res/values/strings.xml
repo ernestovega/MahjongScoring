@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- APP GENERAL -->
+    <string name="app_name">Mahjong Scoring</string>
+	<string name="img_viento_este_abreviatura">E</string>
+	<string name="img_viento_sur_abreviatura">S</string>
+	<string name="img_viento_oeste_abreviatura">W</string>
+	<string name="img_viento_norte_abreviatura">N</string>
+	<string name="img_viento_este">East</string>
+	<string name="img_viento_sur">South</string>
+	<string name="img_viento_oeste">West</string>
+	<string name="img_viento_norte">North</string>
+    
+    <!-- CONFIGURACIONES ACTIVITY -->
+    <string name="action_accept">Start game</string>
+    <string name="configuraciones_juego">Game settings</string>
+	<string name="hint_pedir_jugador_este">East player</string>
+	<string name="hint_pedir_jugador_sur">South player</string>
+	<string name="hint_pedir_jugador_oeste">West player</string>
+	<string name="hint_pedir_jugador_norte">North player</string>
+	<string name="mcr">MCR</string>
+	<string name="riichi">Riichi</string>
+	<string name="cronometro">Chronometer</string>
+	<string name="cuentaatras">Countdown</string>	
+	<string name="txt_ok">OK</string>
+	<string name="txt_puntos_minimos_mcr">Minimum hand points</string>
+	<string name="txt_puntos_iniciales_riichi">Start points</string>
+	<string name="txt_pedir_botes_finales_riichi">End bonus</string>
+	<string name="txt_pedir_duracion_temporizador">Duration</string>
+	<string name="txt_pedir_sonido_final_temporizador">End sound</string>
+	<string name="txt_pedir_sonido_ultimos15_temporizador">Last 15 min. sound</string>
+	<string name="txt_pedir_sonido_final_temporizador_on">End sound: on</string>
+	<string name="txt_pedir_sonido_final_temporizador_off">End sound: off</string>
+	<string name="txt_pedir_sonido_ultimos15_temporizador_on">Last 15min. sound: on</string>
+	<string name="txt_pedir_sonido_ultimos15_temporizador_off">Last 15min. sound: off</string>
+	<string name="txt_parcial_horas">h :</string>
+	<string name="txt_parcial_minutos">m</string>
+	<string name="radiobutton_puntos_minimos_mcr_8">8</string>
+	<string name="radiobutton_puntos_minimos_mcr_7">7</string>
+	<string name="radiobutton_puntos_minimos_mcr_6">6</string>
+	<string name="radiobutton_puntos_minimos_mcr_5">5</string>
+	<string name="radiobutton_puntos_minimos_mcr_4">4</string>
+	<string name="radiobutton_puntos_minimos_mcr_3">3</string>
+	<string name="radiobutton_puntos_minimos_mcr_2">2</string>
+	<string name="radiobutton_puntos_minimos_mcr_1">1</string>
+	<string name="radiobutton_puntos_iniciales_riichi_30k">30000</string>
+	<string name="radiobutton_puntos_iniciales_riichi_27k">27000</string>
+	<string name="radiobutton_puntos_iniciales_riichi_25k">25000</string>
+	<string name="radiobutton_pedir_botes_finales_riichi_30k_10k">30000/10000</string>
+	<string name="radiobutton_pedir_botes_finales_riichi_15k_5k">15000/5000</string>
+	<string name="radiobutton_pedir_botes_finales_riichi_9k_3k">9000/3000</string>
+		
+	<!-- MESA ASIENTOS FRAGMENT -->
+	<string name="jugadas">Combinations</string>
+	<string name="mesa">Table</string>
+	<string name="listado">List</string>
+	<string name="contadores">Counters:</string>
+	<string name="bote">Pot:</string>
+	<string name="x">x</string>
+	<string name="message_confirmacion_terminar">Finish game?</string>
+	<string name="penalty">Penalty</string>
+	<string name="penalty_menosde8puntos">Less than 8 points</string>
+	<string name="penalty_combinacionerronea">Wrong combination</string>
+	<string name="washout">Washout</string>
+	<string name="mahjong_selfdrawn">Mahjong (self-drawn)</string>
+	<string name="mahjong_discard">Mahjong (discard)</string>	
+	<string name="dialog_title_default">Winner</string>
+	<string name="dialog_hint_pedirpuntos">Winner hand points</string>	
+	<string name="empezar">Start</string>
+	<string name="terminar">End</string>
+	<string name="pausar">Pause</string>
+	<string name="reanudar">Resume</string>	
+	<string name="cambio_de_asiento">Seat change</string>
+    <string name="punto">point</string>
+	<string name="puntos">points</string>
+	<string name="toast_puntos_incorrectos_0">Points must be between</string>
+	<string name="toast_puntos_incorrectos_1">and</string>
+	<string name="toast_seleccione_perdedor">Touch loser and confirm</string>
+	<string name="toast_volver_a_pulsar_para_cancelar">Press again to cancel</string>
+	<string name="toast_ultimos15">Last 15 mins remaining</string>
+	<string name="salir_partida">Exit</string>
+    <string name="continuar_partida">Resume</string>
+	<string name="salir">Exit</string>
+	<string name="nombre">Player</string>
+	<string name="puntos_campeonato">Points</string>
+    <string name="puntos_partida">Score</string>
+	<string name="mejor_mano">Best hand:</string>
+    <string name="rondas_jugadas">Played rounds:</string>
+    <string name="fecha_inicio">Start date:</string>
+    <string name="fecha_fin">End date:</string>
+		
+	<string name="chonbo">Chonbo</string>
+	<string name="tenpai">Tenpai</string>
+	<string name="rontriple">Triple Ron</string>
+	<string name="rondoble">Double Ron</string>
+	<string name="ron">Ron</string>
+	<string name="tsumo">Tsumo</string>
+	
+	<!-- MESA LISTADO FRAGMENT -->
+	<string name="txt_lista_vacia">There aren\'t hands yet</string>
+	<string name="lista_titulo_numronda">Hand</string>
+	<string name="lista_titulo_puntosjugada">Score</string>
+	
+	<string name="toast_error_chombo">Change hasn\'t been made. It\'s impossible to do 2 penalties in the same hand.</string>
+	<string name="toast_incompatible_con_chombo">A penalized player can\'t score.</string>
+    <string name="toast_borrar_ultima_ronda">Cancel or press again to remove last round</string>
+	<string name="ronda">Round</string>
+	<string name="empezada">started</string>
+	<string name="ranking">Ranking</string>
+	<string name="eliminar">Delete</string>
+    <string name="cancelar_eliminar">Cancel delete</string>
+    <string name="imagen_jugada_ficha">Hand\'s tile image</string>
+    <string name="un_punto">1 point</string>
+    <string name="dos_puntos">2 points</string>
+    <string name="cuatro_puntos">4 points</string>
+    <string name="seis_puntos">6 points</string>
+    <string name="ocho_puntos">8 points</string>
+    <string name="doce_puntos">12 points</string>
+    <string name="dieciseis_puntos">16 points</string>
+    <string name="veinticuatro_puntos">24 points</string>
+    <string name="treintaydos_puntos">32 points</string>
+    <string name="cuarentayocho_puntos">48 points</string>
+    <string name="sesentaycuatro_puntos">64 points</string>
+    <string name="ochentayocho_puntos">88 points</string>
+    <string name="explicacion_edge_wait">Win with 3 or 7 having 1-2 or 8-9</string>
+    <string name="explicacion_closed_wait">Win with central Chow tile</string>
+    <string name="explicacion_single_waiting">Win with pair tile</string>
+    <string name="explicacion_self_drawn">Win with a tile from the wall</string>
+    <string name="explicacion_concealed_hand">Having all from the wall except last tile</string>
+    <string name="explicacion_fully_concealed_hand">All from the wall</string>
+    <string name="explicacion_last_tile">Win with tile exposed or discarded three times</string>
+    <string name="explicacion_melded_hand">All with melded tiles</string>
+    <string name="explicacion_robbing_the_kong">Win with other player Kong extension tile</string>
+    <string name="explicacion_last_tile_draw">Win with last wall tile</string>
+    <string name="explicacion_last_tile_claim">Win with last discard tile</string>
+    <string name="explicacion_out_with_replacement_tile">Win with Kong extra tile</string>
+
+    <!-- JUGADAS MCR -->
+    <string name="pure_double_chow">Pure double Chow</string>
+    <string name="mixed_double_chow">Mixed double Chow</string>
+    <string name="short_straight">Short straight</string>
+    <string name="two_terminal_chows">Two terminal Chows</string>
+    <string name="pung_of_teminals_or_honors">Pung of terminals or honors</string>
+    <string name="melded_kong">Melded Kong</string>
+    <string name="one_voided_suit">One voided suit</string>
+    <string name="no_honors">No honors</string>
+    <string name="edge_wait">Edge wait</string>
+    <string name="closed_wait">Closed wait</string>
+    <string name="single_waiting">Single waiting</string>
+    <string name="self_drawn">Self-drawn</string>
+	<string name="flower_tiles">Flower tiles</string>
+
+	<string name="dragon_pung">Dragon Pung</string>
+	<string name="prevalent_wind">Prevalent wind</string>
+	<string name="seat_wind">Seat wind</string>
+	<string name="concealed_hand">Concealed hand</string>
+	<string name="all_chows">All Chows</string>
+	<string name="tile_hog">Tile hog</string>
+	<string name="double_pungs">Double Pungs</string>
+	<string name="two_concealed_pungs">Two concealed Pungs</string>
+    <string name="concealed_kong">Concealed Kong</string>
+	<string name="all_simples">All simples</string>
+
+	<string name="outside_hand">Outside hand</string>
+	<string name="fully_concealed_hand">Fully concealed hand</string>
+	<string name="two_melded_kongs">Two melded Kongs</string>
+	<string name="last_tile">Last tile</string>
+
+	<string name="all_pungs">All Pungs</string>
+	<string name="half_flush">Half flush</string>
+	<string name="mixed_shifted_chows">Mixed shifted Chows</string>
+	<string name="all_types">All types</string>
+	<string name="melded_hand">Melded hand</string>
+	<string name="two_dragon_pungs">Two dragon Pungs</string>
+
+	<string name="mixed_straight">Mixed straight</string>
+	<string name="reversible_tiles">Reversible tiles</string>
+	<string name="mixed_triple_chow">Mixed triple Chow</string>
+	<string name="mixed_shifted_pungs">Mixed shifted Pungs</string>
+	<string name="chicken_hand">Chicken hand</string>
+	<string name="last_tile_draw">Last tile draw</string>
+	<string name="last_tile_claim">Last tile claim</string>
+	<string name="out_with_replacement_tile">Out with replacement tile</string>
+	<string name="robbing_the_kong">Robbing the Kong</string>
+	<string name="two_concealed_kongs">Two concealed Kongs</string>
+
+	<string name="lesser_honors_and_knitted_tiles">Lesser honors and knitted tiles</string>
+	<string name="knitted_straight">Knitted straight</string>
+	<string name="upper_four">Upper five</string>
+	<string name="lower_four">Lower five</string>
+	<string name="big_three_winds">Big three winds</string>
+
+	<string name="pure_straight">Pure straight</string>
+	<string name="three_suited_terminal_chows">Three-suited terminal Chows</string>
+	<string name="pure_shifted_chows">Pure shifted Chows</string>
+	<string name="all_fives">All fives</string>
+	<string name="triple_pungs">Triple Pungs</string>
+	<string name="three_concealed_pungs">Three concealed Pungs</string>
+
+	<string name="seven_pairs">Seven pairs</string>
+	<string name="greater_honors_and_knitted_tiles">Greater honors and knitted tiles</string>
+	<string name="all_even_pungs">All even Pungs</string>
+	<string name="full_flush">Full flush</string>
+	<string name="pure_triple_chow">Pure triple Chow</string>
+	<string name="pure_shifted_pungs">Pure shifted Pungs</string>
+	<string name="upper_tiles">Upper tiles</string>
+	<string name="medium_tiles">Medium tiles</string>
+	<string name="lower_tiles">Lower tiles</string>
+
+	<string name="four_pure_shifted_chows">Four pure shifted Chows</string>
+	<string name="three_kongs">Three Kongs</string>
+	<string name="all_terminals_and_honors">All terminals and honors</string>
+
+	<string name="quadruple_chow">Quadruple Chow</string>
+	<string name="four_pure_shifted_pungs">Four pure shifted Pungs</string>
+
+	<string name="all_terminals">All terminals</string>
+	<string name="all_honors">All honor</string>
+	<string name="little_four_winds">Little four winds</string>
+	<string name="little_three_dragons">Little three dragons</string>
+	<string name="four_concealed_pungs">Four concealed Pungs</string>
+	<string name="pure_terminal_chows">Pure terminal Chows</string>
+
+	<string name="big_four_winds">Big four winds</string>
+	<string name="big_three_dragons">Big three dragons</string>
+	<string name="all_green">All green</string>
+	<string name="nine_gates">Nine gates</string>
+	<string name="four_kongs">Four Kongs</string>
+	<string name="seven_shifted_pairs">Seven shifted pairs</string>
+	<string name="thirteen_orphans">Thirteen orphans</string>
+    <string name="mcr_ema_rules">MCR EMA Rules</string>
+    <string name="titulo_pedir_nombres">1. Set player names:</string>
+    <string name="titulo_pedir_tiempo">2. Choose timing type:</string>
+    <string name="nueva_partida">New game</string>
+    <string name="Rondas">Rounds</string>
+    <string name="partidas_antiguos">Old games</string>
+    <string name="message_confirmacion_borrar_partida_antigua">Delete game?</string>
+
+</resources>

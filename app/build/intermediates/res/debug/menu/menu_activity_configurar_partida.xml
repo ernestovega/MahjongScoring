@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mahjongscoring.ActivityConfigurarPartida" >
+
+    <item
+        android:id="@+id/actionbar_item_action_old_games"
+        android:icon="@drawable/ic_action_view_as_list"
+        android:title="@string/partidas_antiguos"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/actionbar_item_action_accept"
+        android:icon="@drawable/ic_action_accept"
+        android:title="@string/action_accept"
+        app:showAsAction="always" />
+
+</menu>
+<!-- From: file:/C:/Android/MahjongScoring/app/src/main/res/menu/menu_activity_configurar_partida.xml -->

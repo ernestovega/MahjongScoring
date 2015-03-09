@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <EditText
+        android:id="@+id/edittext_dialog_pedirpuntos"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:hint="@string/dialog_hint_pedirpuntos" 
+    	android:gravity="center"
+    	android:inputType="number"
+    	android:layout_marginLeft="20dp"
+    	android:layout_marginTop="20dp"
+    	android:layout_marginRight="20dp"
+    	android:layout_marginBottom="16dp" />
+
+</LinearLayout>
+<!-- From: file:/C:/Android/MahjongScoring/app/src/main/res/layout/dialog_pedir_puntos.xml -->

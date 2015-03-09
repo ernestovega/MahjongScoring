@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="azul">#33B5E5</color>
+    <color name="morado">#79009b</color><!--AA66CC-->
+    <color name="verde">#309900</color><!--99CC00-->
+    <color name="naranja">#FFBB33</color>
+    <color name="rojo">#FF4444</color>
+    
+    <color name="azultransparente">#6633B5E5</color>
+    <color name="moradotransparente">#66AA66CC</color>
+    <color name="verdetransparente">#6699CC00</color>
+    <color name="naranjatransparente">#66FFBB33</color>
+    <color name="rojotransparente">#66FF4444</color>
+    
+    <color name="gristransparente">#80FFFFFF</color>
+    <color name="grisclaro">#EEEEEE</color>
+    <color name="grismedio">#DDDDDD</color>
+    <color name="grisoscuro">#222222</color>
+    
+    <color name="marron">#964800</color>
+    
+    
+</resources>
