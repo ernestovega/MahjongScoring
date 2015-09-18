@@ -1,0 +1,207 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark">
+
+    <com.mahjongscoring.Adapters.SquareImageView
+        android:id="@+id/squareimageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical">
+
+	    <LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+	        android:orientation="horizontal"
+	        android:layout_weight="1"
+	    	android:baselineAligned="false">
+	    	
+	        <RelativeLayout
+	            android:id="@+id/relativelayout_asiento_este_partida_antigua"
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+	        	android:layout_weight="1"
+				android:layout_marginRight="1dp"
+				android:layout_marginBottom="1dp"
+				android:background="@drawable/shapeasiento"
+	            android:layout_gravity="top|left"
+	            android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textview_nombre_jugador_este_partida_antigua"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textview_puntos_jugador_este_partida_antigua"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/primary_text_light" />
+
+            </RelativeLayout>
+	        
+	        <RelativeLayout
+	            android:id="@+id/relativelayout_asiento_norte_partida_antigua"
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+	        	android:layout_weight="1"
+				android:layout_marginLeft="1dp"
+				android:layout_marginBottom="1dp"
+				android:background="@drawable/shapeasiento"
+	            android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textview_nombre_jugador_norte_partida_antigua"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textview_puntos_jugador_norte_partida_antigua"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/primary_text_light" />
+
+            </RelativeLayout>
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+	        android:orientation="horizontal"
+	        android:layout_weight="1"
+	    	android:baselineAligned="false">
+	        
+	        <RelativeLayout
+	            android:id="@+id/relativelayout_asiento_sur_partida_antigua"
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+	        	android:layout_weight="1"
+				android:layout_marginRight="1dp"
+				android:layout_marginTop="1dp"
+				android:background="@drawable/shapeasiento"
+	            android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textview_nombre_jugador_sur_partida_antigua"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="16dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/textview_puntos_jugador_sur_partida_antigua"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/primary_text_light" />
+
+	        </RelativeLayout>
+	        
+	        <RelativeLayout
+	            android:id="@+id/relativelayout_asiento_oeste_partida_antigua"
+				android:layout_height="match_parent"
+				android:layout_width="match_parent"
+	        	android:layout_weight="1"
+				android:layout_marginLeft="1dp"
+				android:layout_marginTop="1dp"
+				android:background="@drawable/shapeasiento"
+	            android:gravity="center">
+
+                <TextView
+	                android:id="@+id/textview_puntos_jugador_oeste_partida_antigua"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="16sp"
+					android:textColor="@android:color/primary_text_light" />
+
+                <TextView
+                    android:id="@+id/textview_nombre_jugador_oeste_partida_antigua"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="16dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:gravity="center" />
+
+            </RelativeLayout>
+	        
+	    </LinearLayout>
+	    
+	</LinearLayout>
+	
+    <RelativeLayout
+        android:id="@+id/relativelayout_centro_partida_antigua"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:background="@drawable/shapecentrogrid">
+
+        <TextView
+            android:id="@+id/textview_numero_rondas_partida_antigua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_above="@+id/textview_fecha_partida_antigua"
+            android:textSize="14sp"
+			android:textColor="@android:color/primary_text_light"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="6dp" />
+        
+        <TextView
+            android:id="@+id/textview_fecha_partida_antigua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+			android:textColor="@android:color/primary_text_light"
+			android:includeFontPadding="false"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/textview_id_partida_antigua"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+    
+</FrameLayout><!-- From: file:/C:/Users/Eto/AndroidStudioProjects/mahjongscoring/app/src/main/res/layout/griditem_partidas_antiguas.xml -->

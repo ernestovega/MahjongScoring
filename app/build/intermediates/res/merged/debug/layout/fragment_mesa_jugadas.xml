@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview_lista_jugadas"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearlayout_lista_jugadas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- *****************************************************************************
+                                                1 PUNTO
+        ****************************************************************************** -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+            <TextView style="@style/TextViewSeparadorJugada"
+                android:text="@string/un_punto"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/pure_double_chow"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/pure_double_chow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/mixed_double_chow"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/mixed_double_chow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/short_straight"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/short_straight" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/two_terminal_chows"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/two_terminal_chows" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/pung_of_teminals_or_honors"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/pung_of_terminal_or_honors" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/melded_kong"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/melded_kong" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/one_voided_suit"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/one_voided_suit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/no_honors"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/no_honors" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/edge_wait"/>
+            <TextView style="@style/TextViewExplicacionJugada"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:text="@string/explicacion_edge_wait"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/closed_wait"/>
+            <TextView style="@style/TextViewExplicacionJugada"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:text="@string/explicacion_closed_wait"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/single_waiting"/>
+            <TextView style="@style/TextViewExplicacionJugada"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:text="@string/explicacion_single_waiting"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/concealed_hand"/>
+            <TextView style="@style/TextViewExplicacionJugada"
+                android:text="@string/explicacion_concealed_hand"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/flower_tiles"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/flower_tiles" />
+        </LinearLayout>
+        <!-- *****************************************************************************
+                                                2 PUNTOS
+        ****************************************************************************** -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+            <TextView style="@style/TextViewSeparadorJugada"
+                android:text="@string/dos_puntos"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/dragon_pung"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/dragon_pung" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/prevalent_wind"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/prevalent_wind" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/seat_wind"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/seat_wind" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/concealed_hand"/>
+            <TextView style="@style/TextViewExplicacionJugada"
+                android:text="@string/explicacion_concealed_hand"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/all_chows"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/all_chows" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/tile_hog"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/tile_hog" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/double_pungs"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/double_pungs" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/two_concealed_pungs"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/concealed_kong"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/concealed_kong" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/all_simples"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/all_simples" />
+        </LinearLayout>
+        <!-- *****************************************************************************
+                                                4 PUNTOS
+        ****************************************************************************** -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+            <TextView style="@style/TextViewSeparadorJugada"
+                android:text="@string/cuatro_puntos"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/outside_hand"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/outside_hand" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/fully_concealed_hand"/>
+            <TextView style="@style/TextViewExplicacionJugada"
+                android:text="@string/explicacion_fully_concealed_hand"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/two_melded_kongs"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/two_melded_kongs" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/last_tile"/>
+            <TextView style="@style/TextViewExplicacionJugada"
+                android:text="@string/explicacion_last_tile"/>
+        </LinearLayout>
+        <!-- *****************************************************************************
+                                                6 PUNTOS
+        ****************************************************************************** -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+            <TextView style="@style/TextViewSeparadorJugada"
+                android:text="@string/seis_puntos"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/all_pungs"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/all_pungs" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/half_flush"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/half_flush" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/mixed_shifted_chows"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/mixed_shifted_chows" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/all_types"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/all_types" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/melded_hand"/>
+            <TextView style="@style/TextViewExplicacionJugada"
+                android:text="@string/explicacion_melded_hand"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/two_dragon_pungs"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/two_dragon_pungs" />
+        </LinearLayout>
+        <!-- *****************************************************************************
+                                                8 PUNTOS
+        ****************************************************************************** -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+            <TextView style="@style/TextViewSeparadorJugada"
+                android:text="@string/ocho_puntos"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/mixed_straight"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/mixed_straight" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/reversible_tiles"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/reversible_tiles" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/mixed_triple_chow"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/mixed_triple_chow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/mixed_shifted_pungs"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/mixed_shifted_pungs" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/chicken_hand"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/chicken_hand" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/last_tile_draw"/>
+            <TextView style="@style/TextViewExplicacionJugada"
+                android:text="@string/explicacion_last_tile_draw"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/last_tile_claim"/>
+            <TextView style="@style/TextViewExplicacionJugada"
+                android:text="@string/explicacion_last_tile_claim"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/out_with_replacement_tile"/>
+            <TextView style="@style/TextViewExplicacionJugada"
+                android:text="@string/explicacion_out_with_replacement_tile"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/robbing_the_kong"/>
+            <TextView style="@style/TextViewExplicacionJugada"
+                android:text="@string/explicacion_robbing_the_kong"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/two_concealed_kongs"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/two_concealed_kongs" />
+        </LinearLayout>
+        <!-- *****************************************************************************
+                                                12 PUNTOS
+        ****************************************************************************** -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+            <TextView style="@style/TextViewSeparadorJugada"
+                android:text="@string/doce_puntos"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/lesser_honors_and_knitted_tiles"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/lesser_honors_and_knitted_tiles" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/knitted_straight"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/knitted_straight" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/upper_four"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/upper_four" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/lower_four"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/lower_four" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/big_three_winds"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/big_three_winds" />
+        </LinearLayout>
+        <!-- *****************************************************************************
+                                                16 PUNTOS
+        ****************************************************************************** -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+            <TextView style="@style/TextViewSeparadorJugada"
+                android:text="@string/dieciseis_puntos"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/pure_straight"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/pure_stragiht" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/three_suited_terminal_chows"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/three_suited_terminal_chows" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/pure_shifted_chows"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/pure_shifted_chows" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/all_fives"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/all_fives" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/triple_pungs"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/triple_pungs" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/three_concealed_pungs"/>
+        </LinearLayout>
+        <!-- *****************************************************************************
+                                                24 PUNTOS
+        ****************************************************************************** -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+            <TextView style="@style/TextViewSeparadorJugada"
+                android:text="@string/veinticuatro_puntos"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/seven_pairs"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/seven_pairs" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/greater_honors_and_knitted_tiles"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/greater_honors_and_knitted_tiles" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/all_even_pungs"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/all_even_pungs" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/full_flush"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/full_flush" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/pure_triple_chow"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/pure_triple_chow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/pure_shifted_pungs"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/pure_shifted_pungs" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/upper_tiles"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/upper_tiles" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/medium_tiles"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/medium_tiles" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/lower_tiles"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/lower_tiles" />
+        </LinearLayout>
+        <!-- *****************************************************************************
+                                                32 PUNTOS
+        ****************************************************************************** -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+            <TextView style="@style/TextViewSeparadorJugada"
+                android:text="@string/treintaydos_puntos"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/four_pure_shifted_chows"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/four_pure_shifted_chows" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/three_kongs"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/all_terminals_and_honors"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/all_terminals_and_honors" />
+        </LinearLayout>
+        <!-- *****************************************************************************
+                                                48 PUNTOS
+        ****************************************************************************** -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+            <TextView style="@style/TextViewSeparadorJugada"
+                android:text="@string/cuarentayocho_puntos"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/quadruple_chow"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/quadruple_chow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/four_pure_shifted_pungs"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/four_pure_shifted_pungs" />
+        </LinearLayout>
+        <!-- *****************************************************************************
+                                                64 PUNTOS
+        ****************************************************************************** -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+            <TextView style="@style/TextViewSeparadorJugada"
+                android:text="@string/sesentaycuatro_puntos"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/all_terminals"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/all_terminals" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/all_honors"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/all_honors" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/little_four_winds"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/little_four_winds" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/little_three_dragons"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/little_three_dragons" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/four_concealed_pungs"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/pure_terminal_chows"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/pure_terminal_chows" />
+        </LinearLayout>
+        <!-- *****************************************************************************
+                                                88 PUNTOS
+        ****************************************************************************** -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+            <TextView style="@style/TextViewSeparadorJugada"
+                android:text="@string/ochentayocho_puntos"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/big_four_winds"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/big_four_winds" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/big_three_dragons"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/big_three_dragons" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/all_green"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/all_green" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/nine_gates"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/nine_gates" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/four_kongs"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grisclaro">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/seven_shifted_pairs"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/seven_shifted_pairs" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:background="@color/grismedio">
+            <TextView style="@style/TextViewJugada"
+                android:text="@string/thirteen_orphans"/>
+            <ImageView style="@style/ImageViewJugada"
+                android:src="@drawable/thirteen_orphans" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView><!-- From: file:/C:/Users/Eto/AndroidStudioProjects/mahjongscoring/app/src/main/res/layout/fragment_mesa_jugadas.xml -->

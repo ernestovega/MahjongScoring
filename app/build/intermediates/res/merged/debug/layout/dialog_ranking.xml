@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="480dp"
+        android:orientation="horizontal"
+        android:padding="20dp" >
+
+        <TableRow style="@style/TableRowRanking">
+            <TextView
+                android:id="@+id/textview_ranking_nombre_titulo"
+                style="@style/TextViewRankingTituloTabla"
+                android:layout_weight="5"
+                android:text="@string/nombre"/>
+            <TextView
+                android:id="@+id/textview_ranking_puntos_campeonato_titulo"
+                style="@style/TextViewRankingTituloTabla"
+                android:layout_weight="3"
+                android:text="@string/puntos_campeonato" />
+            <TextView
+                android:id="@+id/textview_ranking_puntos_partida_titulo"
+                style="@style/TextViewRankingTituloTabla"
+                android:layout_weight="4"
+                android:text="@string/puntos_partida" />
+        </TableRow>
+
+        <TableRow style="@style/TableRowRanking">
+            <TextView
+                android:id="@+id/textview_ranking_nombre1"
+                style="@style/TextViewRankingContenidoTabla"
+                android:layout_weight="5" />
+            <TextView
+                android:id="@+id/textview_ranking_puntos_campeonato1"
+                style="@style/TextViewRankingContenidoTabla"
+                android:layout_weight="3" />
+            <TextView
+                android:id="@+id/textview_ranking_puntos_partida1"
+                style="@style/TextViewRankingContenidoTabla"
+                android:layout_weight="4" />
+        </TableRow>
+
+        <TableRow style="@style/TableRowRanking">
+            <TextView
+                android:id="@+id/textview_ranking_nombre2"
+                style="@style/TextViewRankingContenidoTabla"
+                android:layout_weight="5" />
+            <TextView
+                android:id="@+id/textview_ranking_puntos_campeonato2"
+                style="@style/TextViewRankingContenidoTabla"
+                android:layout_weight="3" />
+            <TextView
+                android:id="@+id/textview_ranking_puntos_partida2"
+                style="@style/TextViewRankingContenidoTabla"
+                android:layout_weight="4" />
+        </TableRow>
+
+        <TableRow style="@style/TableRowRanking">
+            <TextView
+                android:id="@+id/textview_ranking_nombre3"
+                style="@style/TextViewRankingContenidoTabla"
+                android:layout_weight="5" />
+            <TextView
+                android:id="@+id/textview_ranking_puntos_campeonato3"
+                style="@style/TextViewRankingContenidoTabla"
+                android:layout_weight="3" />
+            <TextView
+                android:id="@+id/textview_ranking_puntos_partida3"
+                style="@style/TextViewRankingContenidoTabla"
+                android:layout_weight="4" />
+        </TableRow>
+
+        <TableRow style="@style/TableRowRanking">
+            <TextView
+                android:id="@+id/textview_ranking_nombre4"
+                style="@style/TextViewRankingContenidoTabla"
+                android:layout_weight="5" />
+            <TextView
+                android:id="@+id/textview_ranking_puntos_campeonato4"
+                style="@style/TextViewRankingContenidoTabla"
+                android:layout_weight="3" />
+            <TextView
+                android:id="@+id/textview_ranking_puntos_partida4"
+                style="@style/TextViewRankingContenidoTabla"
+                android:layout_weight="4" />
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grisclaro"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <TableRow style="@style/TableRowRanking">
+            <TextView
+                android:id="@+id/textview_ranking_titulo_mejorjugada"
+                style="@style/TextViewRankingTituloResto"
+                android:layout_weight="6"
+                android:text="@string/mejor_mano" />
+            <TextView
+                android:id="@+id/textview_ranking_mejorjugada"
+                style="@style/TextViewRankingContenidoResto"
+                android:layout_weight="6" />
+        </TableRow>
+
+        <TableRow style="@style/TableRowRanking">
+            <TextView
+                android:id="@+id/textview_ranking_titulo_numero_rondas"
+                style="@style/TextViewRankingTituloResto"
+                android:layout_weight="6"
+                android:text="@string/rondas_jugadas" />
+            <TextView
+                android:id="@+id/textview_ranking_numero_rondas"
+                style="@style/TextViewRankingContenidoResto"
+                android:layout_weight="6" />
+        </TableRow>
+
+        <TableRow style="@style/TableRowRanking">
+            <TextView
+                android:id="@+id/textview_ranking_titulo_fecha_inicio"
+                style="@style/TextViewRankingTituloResto"
+                android:layout_weight="6"
+                android:text="@string/fecha_inicio" />
+            <TextView
+                android:id="@+id/textview_ranking_fecha_inicio"
+                style="@style/TextViewRankingContenidoResto"
+                android:layout_weight="6" />
+        </TableRow>
+
+        <TableRow style="@style/TableRowRanking">
+            <TextView
+                android:id="@+id/textview_ranking_titulo_fecha_fin"
+                style="@style/TextViewRankingTituloResto"
+                android:layout_weight="6"
+                android:text="@string/fecha_fin" />
+            <TextView
+                android:id="@+id/textview_ranking_fecha_fin"
+                style="@style/TextViewRankingContenidoResto"
+                android:layout_weight="6" />
+        </TableRow>
+
+    </TableLayout>
+
+</ScrollView><!-- From: file:/C:/Users/Eto/AndroidStudioProjects/mahjongscoring/app/src/main/res/layout/dialog_ranking.xml -->

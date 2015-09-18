@@ -1,0 +1,562 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view_configurar_partida"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mahjongscoring.activities.ActivityConfigurarPartida">
+
+	<LinearLayout 
+	    android:orientation="vertical"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+
+<!-- ######################################################### TIPO JUEGO ############################################################# -->
+
+        <!--<LinearLayout
+            android:id="@+id/linearlayout_tipos_juego"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+               android:focusable="true"
+              roid:focusableInTouchMode="true">
+
+            <Button
+                android:id="@+id/button_mcr"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shapebuttonunselected"
+                android:text="@string/mcr"
+                android:textSize="20sp"
+                android:onClick="onButtonMcrClicked"/>
+
+            <Button
+                android:id="@+id/button_riichi"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shapebuttonunselected"
+                android:text="@string/riichi"
+                android:textSize="20sp"
+                android:onClick="onButtonriichiClicked"/>
+
+        </LinearLayout>-->
+
+		<!--<LinearLayout
+	        android:id="@+id/linearlayout_configs_mcr"
+	        android:orientation="vertical"
+	        android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:baselineAligned="false"
+	        android:layout_gravity="center"
+	        android:gravity="center">
+			
+	        <TextView
+		        android:id="@+id/title_pedir_puntos_minimos_mcr"
+	        	android:text="@string/txt_puntos_minimos_mcr"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="left"
+        		android:textSize="18sp" />
+	    	
+		    <View
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_marginTop="5sp"
+		        android:layout_marginBottom="5sp"
+		        android:background="#66999999" />
+	    
+		    <NumberPicker
+		        android:id="@+id/numberpicker_puntos_minimos_mcr"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />				
+		    
+	    </LinearLayout>
+		    
+		<LinearLayout 
+	        android:id="@+id/linearlayout_configs_riichi"
+	        android:orientation="horizontal"
+	        android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:baselineAligned="false"
+	        android:visibility="gone"
+	        android:gravity="fill_horizontal">
+	    
+		    <LinearLayout 
+		        android:id="@+id/linearlayout_pedir_puntos_iniciales_riichi"
+		        android:orientation="vertical"
+			    android:layout_height="wrap_content"
+				android:layout_width="0dp"
+		        android:layout_weight="1"
+    			android:gravity="left">
+			        
+		        <TextView
+			        android:id="@+id/title_pedir_puntos_iniciales_riichi"
+		        	android:text="@string/txt_puntos_iniciales_riichi"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="left"
+	        		android:textSize="18sp" />
+		    	
+			    <View
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:layout_marginTop="5sp"
+			        android:layout_marginBottom="5sp"
+			        android:background="#66999999" />
+			        
+			    <RadioGroup
+			       	android:id="@+id/radiogroup_puntos_iniciales_riichi"
+				    android:orientation="vertical"
+			        android:layout_width="fill_parent"
+				    android:layout_height="wrap_content">
+				    
+				    <RadioButton 
+				        android:id="@+id/radiobutton_puntos_iniciales_riichi_30k"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/radiobutton_puntos_iniciales_riichi_30k"
+				        android:textSize="18sp"
+				        android:onClick="onRadioButtonPuntosInicialesClicked"
+				        android:checked="true" />
+				    <RadioButton 
+				        android:id="@+id/radiobutton_puntos_iniciales_riichi_27k"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/radiobutton_puntos_iniciales_riichi_27k"
+				        android:textSize="18sp"
+				        android:onClick="onRadioButtonPuntosInicialesClicked" />
+				    <RadioButton 
+				        android:id="@+id/radiobutton_puntos_iniciales_riichi_25k"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/radiobutton_puntos_iniciales_riichi_25k"
+				        android:textSize="18sp"
+				        android:onClick="onRadioButtonPuntosInicialesClicked" />
+			    </RadioGroup>
+			    
+		    </LinearLayout>
+		    
+		    <LinearLayout 
+		        android:id="@+id/linearlayout_pedir_botes_finales_riichi"
+		        android:orientation="vertical"
+			    android:layout_height="wrap_content"
+				android:layout_width="0dp"
+		        android:layout_weight="1"
+    			android:gravity="left"
+				android:layout_marginLeft="16sp">
+		    
+			    <TextView
+			        android:id="@+id/title_pedir_botes_finales_riichi"
+		        	android:text="@string/txt_pedir_botes_finales_riichi"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="left"
+	        		android:textSize="18sp" />
+		    	
+			    <View
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:layout_marginTop="5sp"
+			        android:layout_marginBottom="5sp"
+			        android:background="#66999999" />
+			        
+			    <RadioGroup
+			       	android:id="@+id/radiogroup_pedir_botes_finales_riichi"
+				    android:orientation="vertical"
+			        android:layout_width="fill_parent"
+				    android:layout_height="wrap_content">
+				    
+				    <RadioButton 
+				        android:id="@+id/radiobutton_pedir_botes_finales_riichi_30k_10k"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/radiobutton_pedir_botes_finales_riichi_30k_10k"
+				        android:textSize="18sp"
+				        android:onClick="onRadioButtonBotesFinalesClicked"
+				        android:checked="true" />
+				    <RadioButton 
+				        android:id="@+id/radiobutton_pedir_botes_finales_riichi_15k_5k"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/radiobutton_pedir_botes_finales_riichi_15k_5k"
+				        android:textSize="18sp"
+				        android:onClick="onRadioButtonBotesFinalesClicked" />
+				    <RadioButton 
+				        android:id="@+id/radiobutton_pedir_botes_finales_riichi_9k_3k"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="@string/radiobutton_pedir_botes_finales_riichi_9k_3k"
+				        android:textSize="18sp"
+				        android:onClick="onRadioButtonBotesFinalesClicked" />
+			    </RadioGroup>
+			    
+		    </LinearLayout>
+		    
+	    </LinearLayout>-->
+
+<!-- ######################################################### PEDIR NOMBRES ############################################################# -->
+
+        <TextView
+            android:id="@+id/titulo_pedir_nombres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/titulo_pedir_nombres"
+            android:textColor="@color/gristransparente"
+            android:textSize="18sp"
+            android:layout_gravity="left"/>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_nombre_jugador1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/imageview_viento_jugador1"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:src="@drawable/ic_este"
+                android:contentDescription="@string/img_viento_este_abreviatura" />
+
+            <EditText
+                android:id="@+id/edittext_pedir_nombre_jugador1"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:maxLength="10"
+                android:textSize="20sp"
+                android:textCursorDrawable="@null"
+                android:hint="@string/hint_pedir_jugador_este"
+                android:nextFocusDown="@+id/edittext_pedir_nombre_jugador2" />
+
+            <ImageView
+                android:id="@+id/imageview_ok_jugador1"
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:contentDescription="@string/txt_ok" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_nombre_jugador2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/imageview_viento_jugador2"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:src="@drawable/ic_sur"
+                android:contentDescription="@string/img_viento_sur_abreviatura" />
+
+            <EditText
+                android:id="@+id/edittext_pedir_nombre_jugador2"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:maxLength="10"
+                android:textSize="20sp"
+                android:textCursorDrawable="@null"
+                android:hint="@string/hint_pedir_jugador_sur"
+                android:nextFocusDown="@+id/edittext_pedir_nombre_jugador3" />
+
+            <ImageView
+                android:id="@+id/imageview_ok_jugador2"
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:contentDescription="@string/txt_ok" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_nombre_jugador3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/imageview_viento_jugador3"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:src="@drawable/ic_oeste"
+                android:contentDescription="@string/img_viento_oeste_abreviatura" />
+
+            <EditText
+                android:id="@+id/edittext_pedir_nombre_jugador3"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:maxLength="10"
+                android:textSize="20sp"
+                android:textCursorDrawable="@null"
+                android:hint="@string/hint_pedir_jugador_oeste"
+                android:nextFocusDown="@+id/edittext_pedir_nombre_jugador4" />
+
+            <ImageView
+                android:id="@+id/imageview_ok_jugador3"
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:contentDescription="@string/txt_ok" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_nombre_jugador4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/imageview_viento_jugador4"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:src="@drawable/ic_norte"
+                android:contentDescription="@string/img_viento_norte_abreviatura" />
+
+            <EditText
+                android:id="@+id/edittext_pedir_nombre_jugador4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:maxLength="10"
+                android:textSize="20sp"
+                android:textCursorDrawable="@null"
+                android:hint="@string/hint_pedir_jugador_norte"
+                android:nextFocusDown="@+id/edittext_pedir_nombre_jugador1" />
+
+            <ImageView
+                android:id="@+id/imageview_ok_jugador4"
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:contentDescription="@string/txt_ok" />
+
+        </LinearLayout>
+
+<!-- ######################################################### TIPO TIEMPO ############################################################# -->
+
+        <TextView
+            android:id="@+id/titulo_pedir_tiempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/titulo_pedir_tiempo"
+            android:textColor="@color/gristransparente"
+            android:textSize="18sp"
+            android:layout_gravity="left"/>
+
+		<LinearLayout 
+		    android:id="@+id/linearlayout_tipos_tiempo"
+		    android:orientation="horizontal"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+	        android:layout_marginTop="8sp">
+	    	
+	    	<Button 
+			    android:id="@+id/button_cronometro"
+			    android:layout_width="0sp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:background="@drawable/shapebuttonselected"
+			    android:text="@string/cronometro"
+	        	android:textSize="20sp"
+			    android:onClick="onButtonCronometroClicked"/>
+			
+			<Button 
+			    android:id="@+id/button_temporizador"
+			    android:layout_width="0sp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:text="@string/cuentaatras"
+	        	android:textSize="20sp"
+			    android:background="@drawable/shapebuttonunselected"
+			    android:onClick="onbuttonCuentaatrasClicked"/>
+			
+		</LinearLayout>
+			
+		<LinearLayout 
+            android:id="@+id/linearlayout_configs_temporizador"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:visibility="gone"
+            android:gravity="fill_horizontal">
+	    	
+			<LinearLayout  
+			    android:orientation="vertical"
+			    android:layout_height="wrap_content"
+				android:layout_width="0dp"
+		        android:layout_weight="1"
+    			android:gravity="left">
+			    
+			    <TextView 
+			        android:id="@+id/title_pedir_duracion_temporizador"
+			        android:layout_height="wrap_content"
+			        android:layout_width="wrap_content"
+			        android:text="@string/txt_pedir_duracion_temporizador"
+	        		android:textSize="18sp" />
+			    	
+			    <View
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:layout_marginTop="5sp"
+			        android:layout_marginBottom="5sp"
+			        android:background="#66999999" />
+			    
+			    <LinearLayout  
+				    android:orientation="horizontal"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+			        android:layout_marginTop="8dp"
+			        android:layout_gravity="center"
+			        android:gravity="center">
+				    
+				    <NumberPicker
+				        android:id="@+id/numberpicker_horas_temporizador"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content" />
+				
+		    	</LinearLayout>
+			
+			</LinearLayout>
+			
+		    <LinearLayout  
+			    android:orientation="vertical"
+			    android:layout_height="match_parent"
+				android:layout_width="0dp"
+		        android:layout_weight="1"
+    			android:gravity="left"
+				android:layout_marginLeft="16sp">
+			    
+			    <TextView 
+			        android:id="@+id/title_pedir_sonido_final_temporizador"
+			        android:layout_height="wrap_content"
+			        android:layout_width="wrap_content"
+			        android:text="@string/txt_pedir_sonido_final_temporizador"
+	        		android:textSize="18sp" />
+			    	
+			    <View
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:layout_marginTop="5sp"
+			        android:layout_marginBottom="5sp"
+			        android:background="#66999999" />
+			    
+			    <LinearLayout 
+				    android:orientation="horizontal"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+			        android:layout_marginTop="8sp">
+			    	
+					<ImageButton 
+					    android:id="@+id/button_timer_sonido_final_on"
+					    android:layout_width="0sp"
+					    android:layout_height="wrap_content"
+					    android:layout_weight="1"
+					    android:paddingTop="8dp"
+					    android:paddingBottom="8dp"
+			        	android:src="@drawable/ic_volume_on"
+					    android:contentDescription="@string/txt_pedir_sonido_final_temporizador_on"
+					    android:background="@drawable/shapebuttonselected"
+					    android:onClick="onImagebuttonSonidoFinalOnClicked"/>
+					
+					<ImageButton 
+					    android:id="@+id/button_timer_sonido_final_off"
+					    android:layout_width="0sp"
+					    android:layout_height="wrap_content"
+					    android:layout_weight="1"
+					    android:paddingTop="8dp"
+					    android:paddingBottom="8dp"
+					    android:background="@drawable/shapebuttonunselected"
+			        	android:src="@drawable/ic_volume_muted"
+					    android:contentDescription="@string/txt_pedir_sonido_final_temporizador_off"
+					    android:onClick="onImagebuttonSonidoFinalOffClicked"/>
+					
+				</LinearLayout>
+			    
+			    <TextView 
+			        android:id="@+id/title_pedir_sonido_ultimos15_temporizador"
+			        android:layout_height="wrap_content"
+			        android:layout_width="wrap_content"
+			        android:layout_marginTop="10sp"
+			        android:text="@string/txt_pedir_sonido_ultimos15_temporizador"
+	        		android:textSize="18sp" />
+			    	
+			    <View
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:layout_marginTop="5sp"
+			        android:layout_marginBottom="5sp"
+			        android:background="#66999999" />
+			    
+			    <LinearLayout 
+				    android:orientation="horizontal"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+			        android:layout_marginTop="8sp">
+			    	
+					<ImageButton 
+					    android:id="@+id/button_timer_sonido_ultimos15_on"
+					    android:layout_width="0sp"
+					    android:layout_height="wrap_content"
+					    android:layout_weight="1"
+					    android:paddingTop="8dp"
+					    android:paddingBottom="8dp"
+			        	android:src="@drawable/ic_volume_on"
+					    android:contentDescription="@string/txt_pedir_sonido_ultimos15_temporizador_on"
+					    android:background="@drawable/shapebuttonselected"
+					    android:onClick="onImagebuttonSonidoUltimos15OnClicked"/>
+					
+					<ImageButton 
+					    android:id="@+id/button_timer_sonido_ultimos15_off"
+					    android:layout_width="0sp"
+					    android:layout_height="wrap_content"
+					    android:layout_weight="1"
+					    android:paddingTop="8dp"
+					    android:paddingBottom="8dp"
+					    android:background="@drawable/shapebuttonunselected"
+			        	android:src="@drawable/ic_volume_muted"
+					    android:contentDescription="@string/txt_pedir_sonido_ultimos15_temporizador_off"
+					    android:onClick="onImagebuttonSonidoUltimos15OffClicked"/>
+					
+				</LinearLayout>				
+			
+			</LinearLayout>
+			
+		</LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+    <!-- From: file:/C:/Users/Eto/AndroidStudioProjects/mahjongscoring/app/src/main/res/layout/activity_configurar_partida.xml -->
