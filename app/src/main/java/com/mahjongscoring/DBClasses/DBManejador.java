@@ -15,20 +15,35 @@ import java.util.List;
 
 public class DBManejador extends SQLiteOpenHelper {
 
-	// CONSTANTES
-	public static final int DB_VERSION = 14;
-    public static final String DB_NOMBRE = "MahjongScoringDB";    
+	//region CONSTANTES
+
+    //region Database
+
+	public static final int DB_VERSION = 15;
+    public static final String DB_NOMBRE = "MahjongScoringDB";
+
+    //endregion
+
+	//region Jugadores
+
     private static final String TABLA_JUGADORES = "jugadores";
-    private static final String TABLA_PARTIDAS = "partidas";
-    private static final String TABLA_RONDAS = "rondas";
-    /*private static final String TABLA_PUNTOS_RICHII = "puntos_richii";*/
-    private static final String COLUMNA_JUGADORES_NOMBRE = "nombre";
-    private static final String COLUMNA_JUGADORES_FECHAALTA = "fecha_alta";
+
+	private static final String COLUMNA_JUGADORES_NOMBRE = "nombre";
+	private static final String COLUMNA_JUGADORES_FECHAALTA = "fecha_alta";
+
+	private static final String CREAR_TABLA_JUGADORES = "CREATE TABLE " + TABLA_JUGADORES + "("
+			+ COLUMNA_JUGADORES_NOMBRE + " TEXT NOT NULL PRIMARY KEY,"
+			+ COLUMNA_JUGADORES_FECHAALTA + " INTEGER NOT NULL)";
+
+	//endregion
+
+	//region Partidas
+
+	private static final String TABLA_PARTIDAS = "partidas";
+
     private static final String COLUMNA_PARTIDAS_ID = "id";
     private static final String COLUMNA_PARTIDAS_TIPOJUEGO = "tipo_juego";
-    private static final String COLUMNA_PARTIDAS_PUNTOSINICIALES = "puntos_iniciales";
     private static final String COLUMNA_PARTIDAS_PUNTOSMINIMOSMCR = "puntos_minimos_mcr";
-    private static final String COLUMNA_PARTIDAS_BOTEFINALRICHII = "bote_final_richii";
     private static final String COLUMNA_PARTIDAS_NOMBREJ1 = "nombre_j1";
     private static final String COLUMNA_PARTIDAS_NOMBREJ2 = "nombre_j2";
     private static final String COLUMNA_PARTIDAS_NOMBREJ3 = "nombre_j3";
@@ -43,13 +58,40 @@ public class DBManejador extends SQLiteOpenHelper {
     private static final String COLUMNA_PARTIDAS_DURACIONTIMER = "duracion_timer";
     private static final String COLUMNA_PARTIDAS_MILISTRASCURRIDOSORESTANTES = "milis_transcurridos_o_restantes";
     private static final String COLUMNA_PARTIDAS_NUMERORONDAS = "numero_rondas";
-    /*private static final String COLUMNA_PARTIDAS_CONTADORESRICHII = "contadores_richii";
-    private static final String COLUMNA_PARTIDAS_BOTERICHII = "bote_richii";
-    private static final String COLUMNA_PARTIDAS_VECESJEFERICHII = "veces_jefe_richii";*/
     private static final String COLUMNA_PARTIDAS_NOMBREJUGADORMEJORJUGADA = "nombre_jugador_mejor_jugada";
     private static final String COLUMNA_PARTIDAS_PUNTOSMEJORJUGADA = "puntos_mejor_jugada";
     private static final String COLUMNA_PARTIDAS_FECHAINICIO = "fecha_inicio";
     private static final String COLUMNA_PARTIDAS_FECHAFIN = "fecha_fin";
+
+	private static final String CREAR_TABLA_PARTIDAS = "CREATE TABLE " + TABLA_PARTIDAS + "("
+			+ COLUMNA_PARTIDAS_ID + " INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"
+			+ COLUMNA_PARTIDAS_TIPOJUEGO + " TEXT NOT NULL,"
+			+ COLUMNA_PARTIDAS_PUNTOSMINIMOSMCR + " INTEGER NOT NULL,"
+			+ COLUMNA_PARTIDAS_NOMBREJ1 + " TEXT NOT NULL,"
+			+ COLUMNA_PARTIDAS_NOMBREJ2 + " TEXT NOT NULL,"
+			+ COLUMNA_PARTIDAS_NOMBREJ3 + " TEXT NOT NULL,"
+			+ COLUMNA_PARTIDAS_NOMBREJ4 + " TEXT NOT NULL,"
+			+ COLUMNA_PARTIDAS_PUNTOSJ1 + " INTEGER NOT NULL,"
+			+ COLUMNA_PARTIDAS_PUNTOSJ2 + " INTEGER NOT NULL,"
+			+ COLUMNA_PARTIDAS_PUNTOSJ3 + " INTEGER NOT NULL,"
+			+ COLUMNA_PARTIDAS_PUNTOSJ4 + " INTEGER NOT NULL,"
+			+ COLUMNA_PARTIDAS_ISTIMERON + " BOOLEAN NOT NULL,"
+			+ COLUMNA_PARTIDAS_ISSONIDOFINALON + " BOOLEAN NOT NULL,"
+			+ COLUMNA_PARTIDAS_ISSONIDOULTIMOS15ON + " BOOLEAN NOT NULL,"
+			+ COLUMNA_PARTIDAS_DURACIONTIMER + " INTEGER NOT NULL,"
+			+ COLUMNA_PARTIDAS_MILISTRASCURRIDOSORESTANTES + " INTEGER NOT NULL,"
+			+ COLUMNA_PARTIDAS_NUMERORONDAS + " INTEGER NOT NULL,"
+			+ COLUMNA_PARTIDAS_NOMBREJUGADORMEJORJUGADA + " TEXT NOT NULL,"
+			+ COLUMNA_PARTIDAS_PUNTOSMEJORJUGADA + " INTEGER NOT NULL,"
+			+ COLUMNA_PARTIDAS_FECHAINICIO + " INTEGER NOT NULL,"
+			+ COLUMNA_PARTIDAS_FECHAFIN + " INTEGER)";
+
+	//endregion
+
+	//region Rondas
+
+	private static final String TABLA_RONDAS = "rondas";
+
     private static final String COLUMNA_RONDAS_IDPARTIDA = "id_partida";
     private static final String COLUMNA_RONDAS_NUMERORONDA = "numero_ronda";
     private static final String COLUMNA_RONDAS_PUNTOSRONDAJ1 = "puntos_ronda_j1";
@@ -67,37 +109,7 @@ public class DBManejador extends SQLiteOpenHelper {
     private static final String COLUMNA_RONDAS_PUNTOSJUGADA = "puntos_jugada";
     private static final String COLUMNA_RONDAS_NOMBREGANADOR = "nombre_ganador";
     private static final String COLUMNA_RONDAS_NOMBREPERDEDOR = "nombre_perdedor";
-    
-	private static final String CREAR_TABLA_JUGADORES = "CREATE TABLE " + TABLA_JUGADORES + "("
-            + COLUMNA_JUGADORES_NOMBRE + " TEXT NOT NULL PRIMARY KEY," 
-    		+ COLUMNA_JUGADORES_FECHAALTA + " INTEGER NOT NULL)";
-	private static final String CREAR_TABLA_PARTIDAS = "CREATE TABLE " + TABLA_PARTIDAS + "("
-            + COLUMNA_PARTIDAS_ID + " INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"
-            + COLUMNA_PARTIDAS_TIPOJUEGO + " TEXT NOT NULL,"
-            /*+ COLUMNA_PARTIDAS_PUNTOSINICIALES + " INTEGER NOT NULL,"*/
-            + COLUMNA_PARTIDAS_PUNTOSMINIMOSMCR + " INTEGER NOT NULL,"
-            /*+ COLUMNA_PARTIDAS_BOTEFINALRICHII + " INTEGER NOT NULL,"*/
-            + COLUMNA_PARTIDAS_NOMBREJ1 + " TEXT NOT NULL,"
-            + COLUMNA_PARTIDAS_NOMBREJ2 + " TEXT NOT NULL,"
-            + COLUMNA_PARTIDAS_NOMBREJ3 + " TEXT NOT NULL,"
-            + COLUMNA_PARTIDAS_NOMBREJ4 + " TEXT NOT NULL,"
-            + COLUMNA_PARTIDAS_PUNTOSJ1 + " INTEGER NOT NULL,"
-            + COLUMNA_PARTIDAS_PUNTOSJ2 + " INTEGER NOT NULL,"
-            + COLUMNA_PARTIDAS_PUNTOSJ3 + " INTEGER NOT NULL,"
-            + COLUMNA_PARTIDAS_PUNTOSJ4 + " INTEGER NOT NULL,"
-            + COLUMNA_PARTIDAS_ISTIMERON + " BOOLEAN NOT NULL,"
-            + COLUMNA_PARTIDAS_ISSONIDOFINALON + " BOOLEAN NOT NULL,"
-        	+ COLUMNA_PARTIDAS_ISSONIDOULTIMOS15ON + " BOOLEAN NOT NULL,"
-            + COLUMNA_PARTIDAS_DURACIONTIMER + " INTEGER NOT NULL,"
-            + COLUMNA_PARTIDAS_MILISTRASCURRIDOSORESTANTES + " INTEGER NOT NULL,"
-            + COLUMNA_PARTIDAS_NUMERORONDAS + " INTEGER NOT NULL,"
-            /*+ COLUMNA_PARTIDAS_CONTADORESRICHII + " INTEGER NOT NULL,"
-            + COLUMNA_PARTIDAS_BOTERICHII + " INTEGER NOT NULL,"
-            + COLUMNA_PARTIDAS_VECESJEFERICHII + " INTEGER NOT NULL,"*/
-            + COLUMNA_PARTIDAS_NOMBREJUGADORMEJORJUGADA + " TEXT NOT NULL,"
-            + COLUMNA_PARTIDAS_PUNTOSMEJORJUGADA + " INTEGER NOT NULL,"
-            + COLUMNA_PARTIDAS_FECHAINICIO + " INTEGER NOT NULL,"
-            + COLUMNA_PARTIDAS_FECHAFIN + " INTEGER)";
+
 	private static final String CREAR_TABLA_RONDAS = "CREATE TABLE " + TABLA_RONDAS + "("
 			+ COLUMNA_RONDAS_IDPARTIDA + " INTEGER NOT NULL,"
             + COLUMNA_RONDAS_NUMERORONDA + " INTEGER NOT NULL," 
@@ -117,13 +129,21 @@ public class DBManejador extends SQLiteOpenHelper {
             + COLUMNA_RONDAS_NOMBREGANADOR + " TEXT NOT NULL,"
             + COLUMNA_RONDAS_NOMBREPERDEDOR + " TEXT NOT NULL,"
             + "PRIMARY KEY (" + COLUMNA_RONDAS_IDPARTIDA + "," + COLUMNA_RONDAS_NUMERORONDA + "))";
-	
-    //CONTRUCTORES
+
+	//endregion
+
+	//endregion
+
+	//region CONTRUCTORES
+
     public DBManejador(Context context, String dbName, int dbVersion) {
         super(context, dbName, null, dbVersion);
     }
-    
-    //METODOS SOBREESCRITOS
+
+	//endregion
+
+	//region CICLO DE VIDA
+
     @Override
     public void onCreate(SQLiteDatabase db) {    
     	db.execSQL(CREAR_TABLA_JUGADORES);
@@ -131,15 +151,20 @@ public class DBManejador extends SQLiteOpenHelper {
         db.execSQL(CREAR_TABLA_RONDAS);
 //        db.execSQL(CREAR_TABLA_PUNTOS_RICHII);
     }
+
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_JUGADORES);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_PARTIDAS);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_RONDAS);
-//        db.execSQL("DROP TABLE IF EXISTS " + TABLA_PUNTOS_RICHII);
         onCreate(db);
     }
 
-	//METODOS JUGADOR
+	//endregion
+
+	//region MÉTODOS PÚBLICOS
+
+	//region Jugadores
+
 	public void anadirJugador(DBJugador dbJugador) {
 	    SQLiteDatabase db = this.getWritableDatabase();	 
 	    ContentValues values = new ContentValues();	    
@@ -197,7 +222,10 @@ public class DBManejador extends SQLiteOpenHelper {
 		db.close();
 	}
 
-	//METODOS PARTIDA
+	//endregion
+
+	//region Partidas
+
 	public int anadirPartida(DBPartida partida) {
 	    SQLiteDatabase db = this.getWritableDatabase();	 
 	    ContentValues values = new ContentValues();
@@ -355,7 +383,10 @@ public class DBManejador extends SQLiteOpenHelper {
 		db.close();
 	}
 
-	//METODOS RONDA
+	//endregion
+
+	//region Rondas
+
 	public void anadirRonda(DBRonda ronda) {
 	    SQLiteDatabase db = this.getWritableDatabase();	 
 	    ContentValues values = new ContentValues();
@@ -510,4 +541,8 @@ public class DBManejador extends SQLiteOpenHelper {
     public void eliminarRondas(int idPartida, SQLiteDatabase db) {
         db.delete(TABLA_RONDAS, COLUMNA_RONDAS_IDPARTIDA + " = ?", new String[] { String.valueOf(idPartida) });
     }
+
+	//endregion
+
+	//endregion
 }

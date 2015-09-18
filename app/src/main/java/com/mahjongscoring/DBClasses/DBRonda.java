@@ -2,7 +2,10 @@ package com.mahjongscoring.DBClasses;
 
 public class DBRonda {
 
-	//CAMPOS
+	//region PROPIEDADES
+
+	//region Campos
+
 	private int IdPartida;
 	private int NumeroRonda;
 	private int PuntosRondaJ1;
@@ -21,7 +24,10 @@ public class DBRonda {
 	private String NombreGanador;
 	private String NombrePerdedor;
 
-	//GETTERS
+	//endregion
+
+	//region Getters
+
 	public int getIdPartida() {
 		return IdPartida;
 	}
@@ -74,7 +80,10 @@ public class DBRonda {
 		return NombrePerdedor;
 	}
 
-	//SETTERS
+	//endregion
+
+	//region Setters
+
 	public void setIdPartida(int idPartida) {
 		IdPartida = idPartida;
 	}
@@ -126,9 +135,15 @@ public class DBRonda {
 	public void setNombrePerdedor(String nombrePerdedor) {
 		NombrePerdedor = nombrePerdedor;
 	}
-	
-	//CONSTRUCTORES
+
+	//endregion
+
+	//endregion
+
+	//region CONSTRUCTORES
+
 	public DBRonda (){}
+
 	public DBRonda(int idPartida, int numeroRonda) {
 		IdPartida = idPartida;
 		NumeroRonda = numeroRonda;
@@ -148,35 +163,21 @@ public class DBRonda {
 		NombreGanador = "";
 		NombrePerdedor = "";
 	}
-	public DBRonda(int idPartida, int numeroRonda, int[] puntosRondaJs, int[] puntosTotalesJs, int[] chombosJs, String nombreGanador, String nombrePerdedor, int puntosJugada){
-		IdPartida = idPartida;
-		NumeroRonda = numeroRonda;
-		PuntosRondaJ1 = puntosRondaJs[0];
-		PuntosRondaJ2 = puntosRondaJs[1];
-		PuntosRondaJ3 = puntosRondaJs[2];
-		PuntosRondaJ4 = puntosRondaJs[3];
-		PuntosTotalesJ1 = puntosTotalesJs[0];
-		PuntosTotalesJ2 = puntosTotalesJs[1];
-		PuntosTotalesJ3 = puntosTotalesJs[2];
-		PuntosTotalesJ4 = puntosTotalesJs[3];
-		ChomboJ1 = chombosJs[0];
-		ChomboJ2 = chombosJs[1];
-		ChomboJ3 = chombosJs[2];
-		ChomboJ4 = chombosJs[3];
-		PuntosJugada = puntosJugada;
-		NombreGanador = nombreGanador;
-		NombrePerdedor = nombrePerdedor;
-	}
 
-	//METODOS
+	//endregion
+
+	//region MÉTODOS PÚBLICOS
+
 	public boolean[] getEstanChombo() {
 		boolean[] chombos = { ChomboJ1 != 0, ChomboJ2 != 0, ChomboJ3 != 0, ChomboJ4 != 0 };
 		return chombos;
 	}
+
 	public int[] getChombos() {
 		int[] chombos = { ChomboJ1, ChomboJ2, ChomboJ3, ChomboJ4 };
 		return chombos;
 	}
+
 	public void setChombo(int posicion, int tipoChombo) {
 		if(posicion == 1)
 			ChomboJ1 = tipoChombo;
@@ -187,16 +188,26 @@ public class DBRonda {
 		else
 			ChomboJ4 = tipoChombo;
 	}
+
 	public void setPuntosRonda(int puntosRondaJ1, int puntosRondaJ2, int puntosRondaJ3, int puntosRondaJ4) {
 		PuntosRondaJ1 = puntosRondaJ1;
 		PuntosRondaJ2 = puntosRondaJ2;
 		PuntosRondaJ3 = puntosRondaJ3;
 		PuntosRondaJ4 = puntosRondaJ4;
 	}
+
 	public void setPuntosTotales(int puntosTotalesJ1, int puntosTotalesJ2, int puntosTotalesJ3, int puntosTotalesJ4) {
 		PuntosTotalesJ1 = puntosTotalesJ1;
 		PuntosTotalesJ2 = puntosTotalesJ2;
 		PuntosTotalesJ3 = puntosTotalesJ3;
 		PuntosTotalesJ4 = puntosTotalesJ4;
 	}
+
+	//endregion
+
+	//region MÉTODOS PRIVADOS
+
+
+
+	//endregion
 }
