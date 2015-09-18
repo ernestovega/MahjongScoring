@@ -1,0 +1,5 @@
+mahjongscoring.iml
+.gradle/
+.idea/
+build/
+local.properties
