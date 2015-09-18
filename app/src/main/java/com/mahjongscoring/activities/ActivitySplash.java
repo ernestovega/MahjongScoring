@@ -10,8 +10,8 @@ import java.util.TimerTask;
 public class ActivitySplash extends Activity {
 	
 	private static final long SPLASH_SCREEN_DELAY = 1000;
-    public static final String EXTRA_ID_NUEVA_PARTIDA = "id_nueva_partida";
-    public static final String EXTRA_ES_REANUDACION = "es_reanudacion";
+//    public static final String EXTRA_ID_NUEVA_PARTIDA = "id_nueva_partida";
+//    public static final String EXTRA_ES_REANUDACION = "es_reanudacion";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

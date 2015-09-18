@@ -10,7 +10,6 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -50,7 +49,8 @@ import java.util.List;
 
 public class ActivityMesa extends FragmentActivity {
 
-    //CONSTANTES
+	//region CONSTANTES
+
     public static final int NUM_FRAGMENTS = 3;
     public static final int PUNTOS_MAXIMOS_MCR = 1059;
     public static final String ID_PARTIDA = "id_partida";
@@ -64,7 +64,10 @@ public class ActivityMesa extends FragmentActivity {
     public static final String IS_FINAL_ON = "is_final_on";
     public static final String MILIS_CUANDO_ONPAUSE = "milis_cuando_onpause";
 
-    //VARIABLES
+	//endregion
+
+	//region VARIABLES
+
     public ViewPager mPager;
     public PagerAdapter mPagerAdapter;
     public FragmentMesaJugadas fragmentJugadas;
@@ -90,7 +93,10 @@ public class ActivityMesa extends FragmentActivity {
     public PendingIntent pendingIntent;
     public boolean isPausaIntencionada;
 
-    //CICLO DE VIDA
+	//endregion
+
+	//region CICLO DE VIDA
+
 	@Override    
 	protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,6 +112,7 @@ public class ActivityMesa extends FragmentActivity {
 	    inicializarObjetos();
         restaurarPartida(savedInstanceState);
     }
+
     @Override
     public void onBackPressed() {
         if (mPager.getCurrentItem() == 0) {
@@ -118,6 +125,7 @@ public class ActivityMesa extends FragmentActivity {
         }
         else mPager.setCurrentItem(mPager.getCurrentItem() - 1);
     }
+
     @Override	
 	protected void onSaveInstanceState(Bundle outState) {
 	    super.onSaveInstanceState(outState);
@@ -169,6 +177,7 @@ public class ActivityMesa extends FragmentActivity {
 	    }*/
 	    db.close();
 	}
+
     public void inicializarObjetos() {	
 	    db = new DBManejador(this, DBManejador.DB_NOMBRE, DBManejador.DB_VERSION);
 	    typefaceKorean = Typeface.createFromAsset(getAssets(), "fonts/dekiru.ttf");
@@ -198,6 +207,7 @@ public class ActivityMesa extends FragmentActivity {
 	    }
     	milisCuandoOnPause = 0;
 	}
+
 	public void restaurarPartida(Bundle inState) {
 		if(inState == null) {//PARTIDA QUE EMPIEZA
         	Bundle extras = getIntent().getExtras();
@@ -275,7 +285,10 @@ public class ActivityMesa extends FragmentActivity {
         jugadores.cambiarAsientosMcr(rondas.size());
 	}
 
-    //CLASES HIJAS
+	//endregion
+
+	//region CLASES HIJAS
+
 	public class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
         public ScreenSlidePagerAdapter(FragmentManager fm) {
             super(fm);
@@ -315,7 +328,10 @@ public class ActivityMesa extends FragmentActivity {
         }
     }
 
-    //DIALOGOS
+	//endregion
+
+    //region DIÁLOGOS
+
     public void mostrarAlertDialogAsientoPulsadoMcr() {
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item) {
@@ -356,6 +372,7 @@ public class ActivityMesa extends FragmentActivity {
 		builder.create();
 		builder.show();
     }
+
     public void mostrarAlertDialogCentroPulsado() {
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item) {
@@ -390,6 +407,7 @@ public class ActivityMesa extends FragmentActivity {
 		builder.create();
 		builder.show();
     }
+
     public void mostrarAlertDialogPenalty() {
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item) {
@@ -422,6 +440,7 @@ public class ActivityMesa extends FragmentActivity {
         builder.create();
         builder.show();
     }
+
     public void mostrarAlertDialogPedirPuntos() {
     	final Toast toastPuntosMal = Toast.makeText(this, getString(R.string.toast_puntos_incorrectos_0) + " "
     			+ partida.getPuntosMinimosMcr() + " " + getString(R.string.toast_puntos_incorrectos_1) + " "
@@ -480,6 +499,7 @@ public class ActivityMesa extends FragmentActivity {
 		okButton.setTypeface(typefaceKorean);
         okButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
 	}
+
     public void mostrarAlertDialogTerminar() {
     	AlertDialog.Builder builder = new AlertDialog.Builder(this, android.R.style.Theme_Holo_Light_Dialog);
 	    builder.setMessage(R.string.message_confirmacion_terminar)
@@ -507,6 +527,7 @@ public class ActivityMesa extends FragmentActivity {
 		cancelButton.setTypeface(typefaceKorean);
 		cancelButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
 	}
+
     public void mostrarAlertDialogRankingFinal() {
     	AlertDialog.Builder builder = new AlertDialog.Builder(this, android.R.style.Theme_Holo_Light_Dialog);
         LayoutInflater inflater = this.getLayoutInflater();
@@ -611,7 +632,10 @@ public class ActivityMesa extends FragmentActivity {
         continuarButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 28);
 	}
 
-	//OPERACIONES MCR
+	//endregion
+
+	//region OPERACIONES MCR
+
     public void anotarPenalty() {
         jugadores.getByAsiento(asientoPulsado).setEstaChonbo(true);
         if(isPenaltyMenosDe8Puntos)
@@ -630,6 +654,7 @@ public class ActivityMesa extends FragmentActivity {
             fragmentAsientos.actualizarAsientos();
         }
     }
+
     public void desanotarPenalty() {
         jugadores.getByAsiento(asientoPulsado).setEstaChonbo(false);
         rondas.get(rondas.size() - 1).setChombo(jugadores.getPosicionByAsiento(asientoPulsado), 0);
@@ -638,11 +663,15 @@ public class ActivityMesa extends FragmentActivity {
         //fragmentAsientos.actualizarAsientos();
         asientoPulsado = null;
     }
+
 	public void contarWashout() {
 		nuevaRondaMcr();
 	}
 
-    //OPERACIONES UI Y BBDD
+	//endregion
+
+	//region OPERACIONES UI Y BBDD
+
 	public void nuevaRondaMcr() {
 		DBRonda ronda = rondas.get(rondas.size() - 1);
 		//CONTAR CHOMBOS
@@ -681,6 +710,7 @@ public class ActivityMesa extends FragmentActivity {
 		db.actualizarPartida(partida);
 		iniciarRondaSiguienteMcr();
 	}
+
     public void iniciarRondaSiguienteMcr() {
         asientoPulsado = null;
         asientoPerdedor = null;
@@ -717,6 +747,7 @@ public class ActivityMesa extends FragmentActivity {
             terminarPartidaMcr();
         }
     }
+
     public void borrarUltimaRondaMcr() {
         DBRonda ultimaRonda = null;
         if (partida.getNumeroRondas() == 1) {
@@ -768,6 +799,7 @@ public class ActivityMesa extends FragmentActivity {
         jugadores.cambiarAsientosMcr(partida.getNumeroRondas() + 1);
         iniciarRondaSiguienteMcr();
     }
+
     public void terminarPartidaMcr(){
         if(!isTiempoParado) {
 			isTiempoParado = true;
@@ -785,11 +817,15 @@ public class ActivityMesa extends FragmentActivity {
 		db.actualizarPartida(partida);
 		mostrarAlertDialogRankingFinal();
 	}
+
 	public void salir() {
 		finish();
 	}
 
-    //NOTIFICACIONES
+	//endregion
+
+	//region NOTIFICACIONES
+
     public void crearNotificacionUltimos15() {
         long millisUntilNotification = partida.getMilisTranscurridosORestantes() - 1000*60*15 - 55000;
         if(partida.getMilisTranscurridosORestantes() > 1000*60*15 + 55000) {
@@ -804,6 +840,7 @@ public class ActivityMesa extends FragmentActivity {
             am.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + millisUntilNotification, pi);
         }
     }
+
     public void crearNotificacionFinal() {
         long millisUntilNotification = partida.getMilisTranscurridosORestantes() - 1000*60*15 - 50000;
         if(partida.getMilisTranscurridosORestantes() > 1000*60*15 + 50000) {
@@ -818,6 +855,7 @@ public class ActivityMesa extends FragmentActivity {
             am.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + millisUntilNotification, pi);
         }
     }
+
     public void cancelarNotificaciones() {
         AlarmManager am=(AlarmManager)this.getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(this, BroadcastReceiverNotificaciones.class);
@@ -835,53 +873,56 @@ public class ActivityMesa extends FragmentActivity {
         PendingIntent pi2 = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
         am.cancel(pi2);
     }
+
+	//endregion
 }
 
+//region Tablas de puntos Riichi
 
+//puntosRiichiTsumoJefeMenosDe5 = new int[5][10];
+//puntosRiichiTsumoJefeMenosDe5[0] = new int[]{20, 25, 30, 40, 50, 60, 70, 80, 90, 100};
+//puntosRiichiTsumoJefeMenosDe5[1] = new int[]{0, 0, 500, 700, 800, 1000, 1200, 1300, 1500, 1600};
+//puntosRiichiTsumoJefeMenosDe5[2] = new int[]{700, 0, 1000, 1300, 1600, 2000, 2300, 2600, 2900, 3200};
+//puntosRiichiTsumoJefeMenosDe5[3] = new int[]{1300, 1600, 2000, 2600, 3200, 3900, 4000, 4000, 4000, 4000};
+//puntosRiichiTsumoJef-eMenosDe5[4] = new int[]{2600, 3200, 3900, 4000, 4000, 4000, 4000, 4000, 4000, 4000};
+//puntosRiichiTsumoOtroJefeMenosDe5 = new int[5][10];
+//puntosRiichiTsumoOtroJefeMenosDe5[0] = new int[]{20, 25, 30, 40, 50, 60, 70, 80, 90, 100};
+//puntosRiichiTsumoOtroJefeMenosDe5[1] = new int[]{0,0,500,700,800,1000,1200,1300,1500,1600};
+//puntosRiichiTsumoOtroJefeMenosDe5[2] = new int[]{700,0,1000,1300,1600,2000,2300,2600,2900,3200};
+//puntosRiichiTsumoOtroJefeMenosDe5[3] = new int[]{1300,1600,2000,2600,3200,3900,4000,4000,4000,4000};
+//puntosRiichiTsumoOtroJefeMenosDe5[4] = new int[]{2600,3200,3900,4000,4000,4000,4000,4000,4000,4000};
+//puntosRiichiTsumoOtroOtroMenosDe5 = new int[5][10];
+//puntosRiichiTsumoOtroOtroMenosDe5[0] = new int[]{20, 25, 30, 40, 50, 60, 70, 80, 90, 100};
+//puntosRiichiTsumoOtroOtroMenosDe5[1] = new int[]{0,0,300,400,400,500,600,700,800,800};
+//puntosRiichiTsumoOtroOtroMenosDe5[2] = new int[]{400,0,500,700,800,1000,1200,1300,1500,1600};
+//puntosRiichiTsumoOtroOtroMenosDe5[3] = new int[]{700,800,1000,1300,1600,2000,2000,2000,2000,2000};
+//puntosRiichiTsumoOtroOtroMenosDe5[4] = new int[]{1300,1600,2000,2000,2000,2000,2000,2000,2000,2000};
+//puntosRiichiRonJefeMenosDe5 = new int[5][10];
+//puntosRiichiRonJefeMenosDe5[0] = new int[]{25, 30, 40, 50, 60, 70, 80, 90, 100};
+//puntosRiichiRonJefeMenosDe5[1] = new int[]{0,1500,2000,2400,2900,3400,3900,4400,4800};
+//puntosRiichiRonJefeMenosDe5[2] = new int[]{2400,2900,3900,4800,5800,6800,7700,8700,9600};
+//puntosRiichiRonJefeMenosDe5[3] = new int[]{4800,5800,7700,9600,11600,12000,12000,12000,12000};
+//puntosRiichiRonJefeMenosDe5[4] = new int[]{9600,11600,12000,12000,12000,12000,12000,12000,12000};
+//puntosRiichiRonOtroMenosDe5 = new int[5][10];
+//puntosRiichiRonOtroMenosDe5[0] = new int[]{25, 30, 40, 50, 60, 70, 80, 90, 100};
+//puntosRiichiRonOtroMenosDe5[1] = new int[]{0,1000,13000,16000,2000,2300,2600,2900,3200};
+//puntosRiichiRonOtroMenosDe5[2] = new int[]{1600,2000,2600,3200,3900,4500,5200,5800,6400};
+//puntosRiichiRonOtroMenosDe5[3] = new int[]{3200,3900,5200,6400,7700,8000,8000,8000,8000};
+//puntosRiichiRonOtroMenosDe5[4] = new int[]{6400,7700,8000,8000,8000,8000,8000,8000,8000};
+//puntosRiichiTsumoJefeMasDe5 = new int[2][9];
+//puntosRiichiTsumoJefeMasDe5[0] = new int[]{5,6,7,8,9,10,11,12,13};
+//puntosRiichiTsumoJefeMasDe5[1] = new int[]{4000,6000,6000,8000,8000,8000,12000,12000,16000};
+//puntosRiichiTsumoOtroJefeMasDe4 = new int[2][10];
+//puntosRiichiTsumoOtroJefeMasDe4[0] = new int[]{5,6,7,8,9,10,11,12,13};
+//puntosRiichiTsumoOtroJefeMasDe4[1] = new int[]{4000,6000,6000,8000,8000,8000,12000,12000,16000};
+//puntosRiichiTsumoOtroOtroMasDe4 = new int[2][9];
+//puntosRiichiTsumoOtroOtroMasDe4[0] = new int[]{5,6,7,8,9,10,11,12,13};
+//puntosRiichiTsumoOtroOtroMasDe4[1] = new int[]{2000,3000,3000,4000,4000,4000,6000,6000,8000};
+//puntosRiichiRonJefeMasDe4 = new int[5][10];
+//puntosRiichiRonJefeMasDe4[0] = new int[]{5,6,7,8,9,10,11,12,13};
+//puntosRiichiRonJefeMasDe4[1] = new int[]{12000,18000,18000,24000,24000,24000,36000,36000,48000};
+//puntosRiichiRonOtroMasDe4 = new int[2][9];
+//puntosRiichiRonOtroMasDe4[0] = new int[]{5,6,7,8,9,10,11,12,13};
+//puntosRiichiRonOtroMasDe4[1] = new int[]{8000,12000,12000,16000,16000,16000,24000,24000,32000};
 
-/*
-puntosRiichiTsumoJefeMenosDe5 = new int[5][10];
-puntosRiichiTsumoJefeMenosDe5[0] = new int[]{20, 25, 30, 40, 50, 60, 70, 80, 90, 100};
-puntosRiichiTsumoJefeMenosDe5[1] = new int[]{0, 0, 500, 700, 800, 1000, 1200, 1300, 1500, 1600};
-puntosRiichiTsumoJefeMenosDe5[2] = new int[]{700, 0, 1000, 1300, 1600, 2000, 2300, 2600, 2900, 3200};
-puntosRiichiTsumoJefeMenosDe5[3] = new int[]{1300, 1600, 2000, 2600, 3200, 3900, 4000, 4000, 4000, 4000};
-puntosRiichiTsumoJefeMenosDe5[4] = new int[]{2600, 3200, 3900, 4000, 4000, 4000, 4000, 4000, 4000, 4000};
-puntosRiichiTsumoOtroJefeMenosDe5 = new int[5][10];
-puntosRiichiTsumoOtroJefeMenosDe5[0] = new int[]{20, 25, 30, 40, 50, 60, 70, 80, 90, 100};
-puntosRiichiTsumoOtroJefeMenosDe5[1] = new int[]{0,0,500,700,800,1000,1200,1300,1500,1600};
-puntosRiichiTsumoOtroJefeMenosDe5[2] = new int[]{700,0,1000,1300,1600,2000,2300,2600,2900,3200};
-puntosRiichiTsumoOtroJefeMenosDe5[3] = new int[]{1300,1600,2000,2600,3200,3900,4000,4000,4000,4000};
-puntosRiichiTsumoOtroJefeMenosDe5[4] = new int[]{2600,3200,3900,4000,4000,4000,4000,4000,4000,4000};
-puntosRiichiTsumoOtroOtroMenosDe5 = new int[5][10];
-puntosRiichiTsumoOtroOtroMenosDe5[0] = new int[]{20, 25, 30, 40, 50, 60, 70, 80, 90, 100};
-puntosRiichiTsumoOtroOtroMenosDe5[1] = new int[]{0,0,300,400,400,500,600,700,800,800};
-puntosRiichiTsumoOtroOtroMenosDe5[2] = new int[]{400,0,500,700,800,1000,1200,1300,1500,1600};
-puntosRiichiTsumoOtroOtroMenosDe5[3] = new int[]{700,800,1000,1300,1600,2000,2000,2000,2000,2000};
-puntosRiichiTsumoOtroOtroMenosDe5[4] = new int[]{1300,1600,2000,2000,2000,2000,2000,2000,2000,2000};
-puntosRiichiRonJefeMenosDe5 = new int[5][10];
-puntosRiichiRonJefeMenosDe5[0] = new int[]{25, 30, 40, 50, 60, 70, 80, 90, 100};
-puntosRiichiRonJefeMenosDe5[1] = new int[]{0,1500,2000,2400,2900,3400,3900,4400,4800};
-puntosRiichiRonJefeMenosDe5[2] = new int[]{2400,2900,3900,4800,5800,6800,7700,8700,9600};
-puntosRiichiRonJefeMenosDe5[3] = new int[]{4800,5800,7700,9600,11600,12000,12000,12000,12000};
-puntosRiichiRonJefeMenosDe5[4] = new int[]{9600,11600,12000,12000,12000,12000,12000,12000,12000};
-puntosRiichiRonOtroMenosDe5 = new int[5][10];
-puntosRiichiRonOtroMenosDe5[0] = new int[]{25, 30, 40, 50, 60, 70, 80, 90, 100};
-puntosRiichiRonOtroMenosDe5[1] = new int[]{0,1000,13000,16000,2000,2300,2600,2900,3200};
-puntosRiichiRonOtroMenosDe5[2] = new int[]{1600,2000,2600,3200,3900,4500,5200,5800,6400};
-puntosRiichiRonOtroMenosDe5[3] = new int[]{3200,3900,5200,6400,7700,8000,8000,8000,8000};
-puntosRiichiRonOtroMenosDe5[4] = new int[]{6400,7700,8000,8000,8000,8000,8000,8000,8000};
-puntosRiichiTsumoJefeMasDe5 = new int[2][9];
-puntosRiichiTsumoJefeMasDe5[0] = new int[]{5,6,7,8,9,10,11,12,13};
-puntosRiichiTsumoJefeMasDe5[1] = new int[]{4000,6000,6000,8000,8000,8000,12000,12000,16000};
-puntosRiichiTsumoOtroJefeMasDe4 = new int[2][10];
-puntosRiichiTsumoOtroJefeMasDe4[0] = new int[]{5,6,7,8,9,10,11,12,13};
-puntosRiichiTsumoOtroJefeMasDe4[1] = new int[]{4000,6000,6000,8000,8000,8000,12000,12000,16000};
-puntosRiichiTsumoOtroOtroMasDe4 = new int[2][9];
-puntosRiichiTsumoOtroOtroMasDe4[0] = new int[]{5,6,7,8,9,10,11,12,13};
-puntosRiichiTsumoOtroOtroMasDe4[1] = new int[]{2000,3000,3000,4000,4000,4000,6000,6000,8000};
-puntosRiichiRonJefeMasDe4 = new int[5][10];
-puntosRiichiRonJefeMasDe4[0] = new int[]{5,6,7,8,9,10,11,12,13};
-puntosRiichiRonJefeMasDe4[1] = new int[]{12000,18000,18000,24000,24000,24000,36000,36000,48000};
-puntosRiichiRonOtroMasDe4 = new int[2][9];
-puntosRiichiRonOtroMasDe4[0] = new int[]{5,6,7,8,9,10,11,12,13};
-puntosRiichiRonOtroMasDe4[1] = new int[]{8000,12000,12000,16000,16000,16000,24000,24000,32000};*/
+//endregion
