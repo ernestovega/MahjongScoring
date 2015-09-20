@@ -54,17 +54,17 @@ public class CRonda extends DBRonda {
     }
 
     public void setPuntosRonda(int puntosRondaJ1, int puntosRondaJ2, int puntosRondaJ3, int puntosRondaJ4) {
-        setPuntosRondaJ1(puntosRondaJ1;
-        setPuntosRondaJ2(puntosRondaJ2;
-        setPuntosRondaJ3(puntosRondaJ3;
-        setPuntosRondaJ4(puntosRondaJ4;
+        setPuntosRondaJ1(puntosRondaJ1);
+        setPuntosRondaJ2(puntosRondaJ2);
+        setPuntosRondaJ3(puntosRondaJ3);
+        setPuntosRondaJ4(puntosRondaJ4);
     }
 
     public void setPuntosTotales(int puntosTotalesJ1, int puntosTotalesJ2, int puntosTotalesJ3, int puntosTotalesJ4) {
-        PuntosTotalesJ1 = puntosTotalesJ1;
-        PuntosTotalesJ2 = puntosTotalesJ2;
-        PuntosTotalesJ3 = puntosTotalesJ3;
-        PuntosTotalesJ4 = puntosTotalesJ4;
+        setPuntosTotalesJ1(puntosTotalesJ1);
+        setPuntosTotalesJ2(puntosTotalesJ2);
+        setPuntosTotalesJ3(puntosTotalesJ3);
+        setPuntosTotalesJ4(puntosTotalesJ4);
     }
 
     //endregion

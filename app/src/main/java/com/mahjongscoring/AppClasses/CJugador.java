@@ -71,17 +71,7 @@ public class CJugador extends DBJugador implements Comparable<CJugador>{
 
 	//endregion
 
-	//region MÉTODOS PÚBLICOS
-
-	public void sumarPuntos(int puntos) {
-		Puntos += puntos;
-	}
-
-	public void restarPuntos(int puntos) {
-		Puntos -= puntos;
-	}
-
-	//region Comparable<CJugador>
+	//region MÉTODOS COMPARABLE<CJugador>
 
 	//Orden descendente
 	public int compareTo(CJugador jugador) {
@@ -94,6 +84,16 @@ public class CJugador extends DBJugador implements Comparable<CJugador>{
 //	}
 
 	//endregion
+
+	//region MÉTODOS PÚBLICOS
+
+	public void sumarPuntos(int puntos) {
+		Puntos += puntos;
+	}
+
+	public void restarPuntos(int puntos) {
+		Puntos -= puntos;
+	}
 
 	//endregion
 }
