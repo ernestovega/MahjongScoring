@@ -6,9 +6,7 @@ import java.util.Date;
 
 public class DBPartida {
 
-	//region PROPIEDADES
-
-    //region Campos
+	//region CAMPOS
 
 	private int Id;
 	private Enums.TiposJuego TipoJuego;
@@ -34,126 +32,55 @@ public class DBPartida {
 
     //endregion
 
-    //region Getters
+    //region GETTERS
 
-	public int getId() { return Id;	}
-	public Enums.TiposJuego getTipoJuego() { return TipoJuego; }
-	public int getPuntosMinimosMcr() { return PuntosMinimosMcr; }
-	public String getNombreJ1() { return NombreJ1; }
-	public String getNombreJ2() { return NombreJ2; }
-	public String getNombreJ3() { return NombreJ3; }
-	public String getNombreJ4() { return NombreJ4; }
-	public int getPuntosJ1() { return PuntosJ1; }
-	public int getPuntosJ2() { return PuntosJ2; }
-	public int getPuntosJ3() { return PuntosJ3; }
-	public int getPuntosJ4() { return PuntosJ4; }
-	public boolean isTimerOn() { return IsTimerOn; }
-	public boolean isSonidoFinalOn() { return IsSonidoFinalOn; }
-	public boolean isSonidoUltimos15On() { return IsSonidoUltimos15On; }
-	public long getDuracionTimer() { return DuracionTimer; }
-    public long getMilisTranscurridosORestantes() { return MilisTranscurridosORestantes; }
-	public int getNumeroRondas() { return NumeroRondas; }
-	public String getNombreJugadorMejorJugada() { return NombreJugadorMejorJugada; }
-	public int getPuntosMejorJugada() { return PuntosMejorJugada; }
-	public Date getFechaInicio() { return FechaInicio; }
-	public Date getFechaFin() { return FechaFin; }
-
-	//endregion
-
-	//region Setters
-
-	public void setId(int id) {	Id = id; }
-	public void setTipoJuego(Enums.TiposJuego tipoJuego) { TipoJuego = tipoJuego; }
-	public void setPuntosMinimosMcr(int puntosMinimosMcr) { PuntosMinimosMcr = puntosMinimosMcr; }
-	public void setNombreJ1(String nombreJ1) { NombreJ1 = nombreJ1;	}
-	public void setNombreJ2(String nombreJ2) { NombreJ2 = nombreJ2;	}
-	public void setNombreJ3(String nombreJ3) { NombreJ3 = nombreJ3;	}
-	public void setNombreJ4(String nombreJ4) { NombreJ4 = nombreJ4;	}
-	public void setPuntosJ1(int puntosJ1) { PuntosJ1 = puntosJ1; }
-	public void setPuntosJ2(int puntosJ2) { PuntosJ2 = puntosJ2; }
-	public void setPuntosJ3(int puntosJ3) { PuntosJ3 = puntosJ3; }
-	public void setPuntosJ4(int puntosJ4) { PuntosJ4 = puntosJ4; }
-	public void setIsTimerOn(boolean isTimerOn) { IsTimerOn = isTimerOn; }
-	public void setIsSonidoFinalOn(boolean isSonidoFinalOn) { IsSonidoFinalOn = isSonidoFinalOn; }
-	public void setIsSonidoUltimos15On(boolean isSonidoUltimos15On) { IsSonidoUltimos15On = isSonidoUltimos15On; }
-	public void setDuracionTimer(long duracionTimer) { DuracionTimer = duracionTimer; }
-    public void setMilisTranscurridosORestantes(long milisTranscurridosORestantes) { this.MilisTranscurridosORestantes = milisTranscurridosORestantes; }
-	public void setNumeroRondas(int numeroRondas) { NumeroRondas = numeroRondas; }
-	public void setNombreJugadorMejorJugada(String nombreJugadorMejorJugada) { NombreJugadorMejorJugada = nombreJugadorMejorJugada; }
-	public void setPuntosMejorJugada(int puntosMejorJugada) { PuntosMejorJugada = puntosMejorJugada; }
-	public void setFechaInicio(Date fechaInicio) { FechaInicio = fechaInicio; }
-	public void setFechaFin(Date fechaFin) { FechaFin = fechaFin; }
+	protected int getId() { return Id;	}
+	protected Enums.TiposJuego getTipoJuego() { return TipoJuego; }
+	protected int getPuntosMinimosMcr() { return PuntosMinimosMcr; }
+	protected String getNombreJ1() { return NombreJ1; }
+	protected String getNombreJ2() { return NombreJ2; }
+	protected String getNombreJ3() { return NombreJ3; }
+	protected String getNombreJ4() { return NombreJ4; }
+	protected int getPuntosJ1() { return PuntosJ1; }
+	protected int getPuntosJ2() { return PuntosJ2; }
+	protected int getPuntosJ3() { return PuntosJ3; }
+	protected int getPuntosJ4() { return PuntosJ4; }
+	protected boolean isTimerOn() { return IsTimerOn; }
+	protected boolean isSonidoFinalOn() { return IsSonidoFinalOn; }
+	protected boolean isSonidoUltimos15On() { return IsSonidoUltimos15On; }
+	protected long getDuracionTimer() { return DuracionTimer; }
+    protected long getMilisTranscurridosORestantes() { return MilisTranscurridosORestantes; }
+	protected int getNumeroRondas() { return NumeroRondas; }
+	protected String getNombreJugadorMejorJugada() { return NombreJugadorMejorJugada; }
+	protected int getPuntosMejorJugada() { return PuntosMejorJugada; }
+	protected Date getFechaInicio() { return FechaInicio; }
+	protected Date getFechaFin() { return FechaFin; }
 
 	//endregion
 
-	//endregion
+	//region SETTERS
 
-	//region CONSTRUCTORES
-
-    public DBPartida() {}
-
-	public DBPartida(Enums.TiposJuego tipoJuego,
-					 int puntosMinimosMcr,
-					 String[] nombresJs,
-					 int[] puntosJs,
-					 boolean isTimerOn,
-					 boolean isSonidoFinalOn,
-					 boolean isSonidoUltimos15On,
-					 long duracionTimer,
-					 long milisTranscurridosORestantes,
-					 int numeroRondas,
-					 String nombreJugadorMejorJugada,
-					 int puntosMejorJugada,
-					 Date fechaInicio,
-					 Date fechaFin){
-		TipoJuego = tipoJuego;
-		PuntosMinimosMcr = puntosMinimosMcr;
-		NombreJ1 = nombresJs[0];
-		NombreJ2 = nombresJs[1];
-		NombreJ3 = nombresJs[2];
-		NombreJ4 = nombresJs[3];
-		PuntosJ1 = puntosJs[0];
-		PuntosJ2 = puntosJs[1];
-		PuntosJ3 = puntosJs[2];
-		PuntosJ4 = puntosJs[3];
-		IsTimerOn = isTimerOn;
-		IsSonidoFinalOn = isSonidoFinalOn;
-		IsSonidoUltimos15On = isSonidoUltimos15On;
-		DuracionTimer = duracionTimer;
-        MilisTranscurridosORestantes = milisTranscurridosORestantes;
-		NumeroRondas = numeroRondas;
-		NombreJugadorMejorJugada = nombreJugadorMejorJugada;
-		PuntosMejorJugada = puntosMejorJugada;
-		FechaInicio = fechaInicio;
-		FechaFin = fechaFin;
-	}
-
-	//endregion
-
-	//region MÉTODOS PÚBLICOS
-
-	public String[] getArrayNombres() {
-		String[] nombres = { NombreJ1, NombreJ2, NombreJ3, NombreJ4 };
-		return nombres;
-	}
-
-	public int[] getArrayPuntos() {
-		int[] puntos = { PuntosJ1, PuntosJ2, PuntosJ3, PuntosJ4 };
-		return puntos;
-	}
-
-	public void setPuntos(int puntosJ1, int puntosJ2, int puntosJ3, int puntosJ4) {
-		PuntosJ1 = puntosJ1;
-		PuntosJ2 = puntosJ2;
-		PuntosJ3 = puntosJ3;
-		PuntosJ4 = puntosJ4;
-	}
-
-	//endregion
-
-	//region MÉTODOS PRIVADOS
-
-
+	protected void setId(int id) {	Id = id; }
+	protected void setTipoJuego(Enums.TiposJuego tipoJuego) { TipoJuego = tipoJuego; }
+	protected void setPuntosMinimosMcr(int puntosMinimosMcr) { PuntosMinimosMcr = puntosMinimosMcr; }
+	protected void setNombreJ1(String nombreJ1) { NombreJ1 = nombreJ1;	}
+	protected void setNombreJ2(String nombreJ2) { NombreJ2 = nombreJ2;	}
+	protected void setNombreJ3(String nombreJ3) { NombreJ3 = nombreJ3;	}
+	protected void setNombreJ4(String nombreJ4) { NombreJ4 = nombreJ4;	}
+	protected void setPuntosJ1(int puntosJ1) { PuntosJ1 = puntosJ1; }
+	protected void setPuntosJ2(int puntosJ2) { PuntosJ2 = puntosJ2; }
+	protected void setPuntosJ3(int puntosJ3) { PuntosJ3 = puntosJ3; }
+	protected void setPuntosJ4(int puntosJ4) { PuntosJ4 = puntosJ4; }
+	protected void setIsTimerOn(boolean isTimerOn) { IsTimerOn = isTimerOn; }
+	protected void setIsSonidoFinalOn(boolean isSonidoFinalOn) { IsSonidoFinalOn = isSonidoFinalOn; }
+	protected void setIsSonidoUltimos15On(boolean isSonidoUltimos15On) { IsSonidoUltimos15On = isSonidoUltimos15On; }
+	protected void setDuracionTimer(long duracionTimer) { DuracionTimer = duracionTimer; }
+    protected void setMilisTranscurridosORestantes(long milisTranscurridosORestantes) { this.MilisTranscurridosORestantes = milisTranscurridosORestantes; }
+	protected void setNumeroRondas(int numeroRondas) { NumeroRondas = numeroRondas; }
+	protected void setNombreJugadorMejorJugada(String nombreJugadorMejorJugada) { NombreJugadorMejorJugada = nombreJugadorMejorJugada; }
+	protected void setPuntosMejorJugada(int puntosMejorJugada) { PuntosMejorJugada = puntosMejorJugada; }
+	protected void setFechaInicio(Date fechaInicio) { FechaInicio = fechaInicio; }
+	protected void setFechaFin(Date fechaFin) { FechaFin = fechaFin; }
 
 	//endregion
 }

@@ -4,59 +4,24 @@ import java.util.Date;
 
 public class DBJugador {
 
-	//region PROPIEDADES
-
-    //region Campos
+    //region CAMPOS
 
 	private String Nombre;
 	private Date FechaAlta;
 
 	//endregion
 
-	//region Getters
+	//region GETTERS
 
-	public String getNombre() {
-		return Nombre;
-	}
-	public Date getFechaAlta() {
-		return FechaAlta;
-	}
+	protected String getNombre() { return Nombre; }
+	protected Date getFechaAlta() { return FechaAlta; }
 
 	//endregion
 
-	//region Setters
+	//region SETTERS
 
-	public void setNombre(String nombre) {
-		Nombre = nombre;
-	}
-	public void setFechaAlta(Date fechaAlta) {
-		FechaAlta = fechaAlta;
-	}
+	protected void setNombre(String nombre) { Nombre = nombre;	}
+	protected void setFechaAlta(Date fechaAlta) {	FechaAlta = fechaAlta;	}
 
 	//endregion
-
-	//endregion
-
-	//region CONSTRUCTORES
-
-	public DBJugador(){}
-
-	public DBJugador(String nombre, Date fechaAlta){
-		Nombre = nombre;
-		FechaAlta = fechaAlta;
-	}
-
-	//endregion
-
-	//region MÉTODOS PÚBLICOS
-
-
-
-	//endregion
-
-    //region MÉTODOS PRIVADOS
-
-
-
-    //endregion
 }

@@ -6,13 +6,17 @@ import java.util.List;
 
 public class CJugadores {
 	
-	//CAMPOS
+	//region CAMPOS
+
 	public CJugador j1;
 	public CJugador j2;
 	public CJugador j3;
 	public CJugador j4;
-	
-	//CONSTRUCTORES
+
+	//endregion
+
+	//region CONSTRUCTORES
+
 	public CJugadores() {}
 	public CJugadores (String[] nombres, int[] puntos, boolean[] chombos) {
 		j1 = new CJugador(nombres[0], puntos[0], Enums.Asientos.ESTE);
@@ -27,7 +31,10 @@ public class CJugadores {
 		j4 = new CJugador(nombres[3], puntos[3], asientos[3], estanTapados[3], estanChombo[3]);
 	}
 
-	//METODOS
+	//endregion
+
+	//region  MÉTODOS PÚBLICOS
+
 	public int getPosicionByAsiento(Enums.Asientos asiento) {
 		if (j1.getAsiento() == asiento) return 1;
 		else if (j2.getAsiento() == asiento) return 2;
@@ -227,4 +234,6 @@ public class CJugadores {
 		if(j4.estaChonbo()) count++;
 		return count == 4;		
 	}
+
+	//endregion
 }

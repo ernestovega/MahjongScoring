@@ -173,6 +173,19 @@ public class DBManejador extends SQLiteOpenHelper {
 	    db.insert(TABLA_JUGADORES, null, values);
 	    db.close();
 	}
+	public int actualizarJugador(DBJugador dbJugador) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put(COLUMNA_JUGADORES_NOMBRE, dbJugador.getNombre());
+		values.put(COLUMNA_JUGADORES_FECHAALTA, dbJugador.getFechaAlta().getTime());
+		return db.update(TABLA_JUGADORES, values, COLUMNA_JUGADORES_NOMBRE + " = ?", new String[] { dbJugador.getNombre() });
+	}
+	public void eliminarJugador(DBJugador dbJugador) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		db.delete(TABLA_JUGADORES, COLUMNA_JUGADORES_NOMBRE + " = ?", new String[] { dbJugador.getNombre() });
+		db.close();
+	}
+
 	public DBJugador obtenerJugador(String nombre) {
 		SQLiteDatabase db = this.getReadableDatabase();
 		String selectQuery = "SELECT  * FROM " + TABLA_JUGADORES + " WHERE "
@@ -208,18 +221,6 @@ public class DBManejador extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(countQuery, null);
         cursor.close();
         return cursor.getCount();	
-	}
-	public int actualizarJugador(DBJugador dbJugador) {
-		SQLiteDatabase db = this.getWritableDatabase();		 
-	    ContentValues values = new ContentValues();
-	    values.put(COLUMNA_JUGADORES_NOMBRE, dbJugador.getNombre());
-	    values.put(COLUMNA_JUGADORES_FECHAALTA, dbJugador.getFechaAlta().getTime());
-	    return db.update(TABLA_JUGADORES, values, COLUMNA_JUGADORES_NOMBRE + " = ?", new String[] { dbJugador.getNombre() });
-	}
-	public void eliminarJugador(DBJugador dbJugador) {
-		SQLiteDatabase db = this.getWritableDatabase();	
-		db.delete(TABLA_JUGADORES, COLUMNA_JUGADORES_NOMBRE + " = ?", new String[] { dbJugador.getNombre() });
-		db.close();
 	}
 
 	//endregion

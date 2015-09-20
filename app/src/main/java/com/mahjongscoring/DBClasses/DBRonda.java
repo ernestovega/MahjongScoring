@@ -2,9 +2,7 @@ package com.mahjongscoring.DBClasses;
 
 public class DBRonda {
 
-	//region PROPIEDADES
-
-	//region Campos
+	//region CAMPOS
 
 	private int IdPartida;
 	private int NumeroRonda;
@@ -26,7 +24,7 @@ public class DBRonda {
 
 	//endregion
 
-	//region Getters
+	//region GETTERS
 
 	public int getIdPartida() {
 		return IdPartida;
@@ -82,7 +80,7 @@ public class DBRonda {
 
 	//endregion
 
-	//region Setters
+	//region SETTERS
 
 	public void setIdPartida(int idPartida) {
 		IdPartida = idPartida;
@@ -135,79 +133,6 @@ public class DBRonda {
 	public void setNombrePerdedor(String nombrePerdedor) {
 		NombrePerdedor = nombrePerdedor;
 	}
-
-	//endregion
-
-	//endregion
-
-	//region CONSTRUCTORES
-
-	public DBRonda (){}
-
-	public DBRonda(int idPartida, int numeroRonda) {
-		IdPartida = idPartida;
-		NumeroRonda = numeroRonda;
-		PuntosRondaJ1 = 0;
-		PuntosRondaJ2 = 0;
-		PuntosRondaJ3 = 0;
-		PuntosRondaJ4 = 0;
-		PuntosTotalesJ1 = 0;
-		PuntosTotalesJ2 = 0;
-		PuntosTotalesJ3 = 0;
-		PuntosTotalesJ4 = 0;
-		ChomboJ1 = 0;
-		ChomboJ2 = 0;
-		ChomboJ3 = 0;
-		ChomboJ4 = 0;
-		PuntosJugada = 0;
-		NombreGanador = "";
-		NombrePerdedor = "";
-	}
-
-	//endregion
-
-	//region MÉTODOS PÚBLICOS
-
-	public boolean[] getEstanChombo() {
-		boolean[] chombos = { ChomboJ1 != 0, ChomboJ2 != 0, ChomboJ3 != 0, ChomboJ4 != 0 };
-		return chombos;
-	}
-
-	public int[] getChombos() {
-		int[] chombos = { ChomboJ1, ChomboJ2, ChomboJ3, ChomboJ4 };
-		return chombos;
-	}
-
-	public void setChombo(int posicion, int tipoChombo) {
-		if(posicion == 1)
-			ChomboJ1 = tipoChombo;
-		else if(posicion == 2)
-			ChomboJ2 = tipoChombo;
-		else if(posicion == 3)
-			ChomboJ3 = tipoChombo;
-		else
-			ChomboJ4 = tipoChombo;
-	}
-
-	public void setPuntosRonda(int puntosRondaJ1, int puntosRondaJ2, int puntosRondaJ3, int puntosRondaJ4) {
-		PuntosRondaJ1 = puntosRondaJ1;
-		PuntosRondaJ2 = puntosRondaJ2;
-		PuntosRondaJ3 = puntosRondaJ3;
-		PuntosRondaJ4 = puntosRondaJ4;
-	}
-
-	public void setPuntosTotales(int puntosTotalesJ1, int puntosTotalesJ2, int puntosTotalesJ3, int puntosTotalesJ4) {
-		PuntosTotalesJ1 = puntosTotalesJ1;
-		PuntosTotalesJ2 = puntosTotalesJ2;
-		PuntosTotalesJ3 = puntosTotalesJ3;
-		PuntosTotalesJ4 = puntosTotalesJ4;
-	}
-
-	//endregion
-
-	//region MÉTODOS PRIVADOS
-
-
 
 	//endregion
 }
